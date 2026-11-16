@@ -1,0 +1,5361 @@
+[
+  {
+    "code": "001",
+    "equipment": [
+      "02"
+    ],
+    "name": "DISTANCE TO GO (BCD)",
+    "page": 7,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "TENTHS OF NAUT MI"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "UNITS OF NAUT MI"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENS OF NAUT MI"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "HUNDREDS OF NAUT MI"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "THOUSANDS OF NAUT MI"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "001",
+    "equipment": [
+      "09"
+    ],
+    "name": "DISTANCE TO GO (BCD)",
+    "page": 7,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "TENTHS OF NAUT MI"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "UNITS OF NAUT MI"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENS OF NAUT MI"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "HUNDREDS OF NAUT MI"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "THOUSANDS OF NAUT MI"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "002",
+    "equipment": [
+      "02"
+    ],
+    "name": "TIME TO GO (BCD)",
+    "page": 7,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "SPARES"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "TENTHS OF MINUTES"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "UNITS OF MINUTES"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "TENS OF MINUTES"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "HUNDREDS OF MINUTES"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "002",
+    "equipment": [
+      "09"
+    ],
+    "name": "TIME TO GO (BCD)",
+    "page": 7,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "SPARES"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "TENTHS OF MINUTES"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "UNITS OF MINUTES"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "TENS OF MINUTES"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "HUNDREDS OF MINUTES"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "012",
+    "equipment": [
+      "02"
+    ],
+    "name": "GROUND SPEED (BCD)",
+    "page": 7,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "TENTHS OF KNOTS"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "UNITS OF KNOTS"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENS OF KNOTS"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "HUNDREDS OF KNOTS"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "THOUSANDS OF KNOTS"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "012",
+    "equipment": [
+      "09"
+    ],
+    "name": "GROUND SPEED (BCD)",
+    "page": 7,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "TENTHS OF KNOTS"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "UNITS OF KNOTS"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENS OF KNOTS"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "HUNDREDS OF KNOTS"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "THOUSANDS OF KNOTS"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "017",
+    "equipment": [
+      "10"
+    ],
+    "name": "SELECTED RUNWAY HDG (BCD)",
+    "page": 8,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "SPARES"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "TENTHS OF DEGREES"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "UNITS OF DEGREES"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "TENS OF DEGREES"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "HUNDREDS OF DEGREES"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "024G",
+    "equipment": [
+      "11"
+    ],
+    "name": "SELECTED COURSE 1 (BCD)",
+    "page": 8,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "HSI CRS SEL MASTER CONTROL"
+      },
+      {
+        "first": 12,
+        "last": 18,
+        "name": "SPARES"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "UNITS OF DEGREES"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "TENS OF DEGREES"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "HUNDREDS OF DEGREES"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "027",
+    "equipment": [
+      "11"
+    ],
+    "name": "SELECTED COURSE 2 (BCD)",
+    "page": 8,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 18,
+        "name": "SPARES"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "UNITS OF DEGREES"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "TENS OF DEGREES"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "HUNDREDS OF DEGREES"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "030G",
+    "equipment": [
+      "02"
+    ],
+    "name": "VHF COM FREQUENCY (BCD)",
+    "page": 8,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "THOUSANDTHS OF MHZ"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "HUNDREDTHS OF MHZ"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENTHS OF MHZ"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "UNITS OF MHZ"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "TENS OF MHZ"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM AND DISCRETE"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "030G",
+    "equipment": [
+      "16"
+    ],
+    "name": "VHF COM FREQUENCY (BCD)",
+    "page": 9,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "THOUSANDTHS OF MHZ"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "HUNDREDTHS OF MHZ"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENTHS OF MHZ"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "UNITS OF MHZ"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "TENS OF MHZ"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM AND DISCRETE"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "031G",
+    "equipment": [
+      "02"
+    ],
+    "name": "BEACON TRANSPONDER CODE (BCD)",
+    "page": 9,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "ALTITUDE REPORTING"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "CONTROL FUNCTION (SEE 15-17 BELOW)"
+      },
+      {
+        "first": 13,
+        "last": 13,
+        "name": "IDENT"
+      },
+      {
+        "first": 14,
+        "last": 14,
+        "name": "ALTITUDE DATA SOURCE SELECT"
+      },
+      {
+        "first": 15,
+        "last": 17,
+        "name": "CONTROL FUNCTION"
+      },
+      {
+        "first": 18,
+        "last": 18,
+        "name": "D1"
+      },
+      {
+        "first": 19,
+        "last": 19,
+        "name": "D2"
+      },
+      {
+        "first": 20,
+        "last": 20,
+        "name": "D4"
+      },
+      {
+        "first": 21,
+        "last": 21,
+        "name": "C1"
+      },
+      {
+        "first": 22,
+        "last": 22,
+        "name": "C2"
+      },
+      {
+        "first": 23,
+        "last": 23,
+        "name": "C4"
+      },
+      {
+        "first": 24,
+        "last": 24,
+        "name": "B1"
+      },
+      {
+        "first": 25,
+        "last": 25,
+        "name": "B2"
+      },
+      {
+        "first": 26,
+        "last": 26,
+        "name": "B4"
+      },
+      {
+        "first": 27,
+        "last": 27,
+        "name": "A1"
+      },
+      {
+        "first": 28,
+        "last": 28,
+        "name": "A2"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "A4"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "031G",
+    "equipment": [
+      "18"
+    ],
+    "name": "BEACON TRANSPONDER CODE (BCD)",
+    "page": 10,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "ALTITUDE REPORTING"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "CONTROL FUNCTION (SEE 15-17 BELOW)"
+      },
+      {
+        "first": 13,
+        "last": 13,
+        "name": "IDENT"
+      },
+      {
+        "first": 14,
+        "last": 14,
+        "name": "ALTITUDE DATA SOURCE SELECT"
+      },
+      {
+        "first": 15,
+        "last": 17,
+        "name": "CONTROL FUNCTION"
+      },
+      {
+        "first": 18,
+        "last": 18,
+        "name": "D1"
+      },
+      {
+        "first": 19,
+        "last": 19,
+        "name": "D2"
+      },
+      {
+        "first": 20,
+        "last": 20,
+        "name": "D4"
+      },
+      {
+        "first": 21,
+        "last": 21,
+        "name": "C1"
+      },
+      {
+        "first": 22,
+        "last": 22,
+        "name": "C2"
+      },
+      {
+        "first": 23,
+        "last": 23,
+        "name": "C4"
+      },
+      {
+        "first": 24,
+        "last": 24,
+        "name": "B1"
+      },
+      {
+        "first": 25,
+        "last": 25,
+        "name": "B2"
+      },
+      {
+        "first": 26,
+        "last": 26,
+        "name": "B4"
+      },
+      {
+        "first": 27,
+        "last": 27,
+        "name": "A1"
+      },
+      {
+        "first": 28,
+        "last": 28,
+        "name": "A2"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "A4"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM AND DISCRETE"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "032",
+    "equipment": [
+      "02"
+    ],
+    "name": "ADF FREQUENCY (BCD)",
+    "page": 10,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "BFO"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "MODE"
+      },
+      {
+        "first": 13,
+        "last": 13,
+        "name": "SPARE"
+      },
+      {
+        "first": 14,
+        "last": 14,
+        "name": "0.5KHZ"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "UNITS OF KHZ"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENS OF KHZ"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "HUNDREDS OF KHZ"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "THOUSANDS OF KHZ"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "032",
+    "equipment": [
+      "12"
+    ],
+    "name": "ADF FREQUENCY (BCD)",
+    "page": 10,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "BFO"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "MODE"
+      },
+      {
+        "first": 13,
+        "last": 13,
+        "name": "SPARE"
+      },
+      {
+        "first": 14,
+        "last": 14,
+        "name": "0.5KHZ"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "UNITS OF KHZ"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENS OF KHZ"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "HUNDREDS OF KHZ"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "THOUSANDS OF KHZ"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "033",
+    "equipment": [
+      "02"
+    ],
+    "name": "ILS FREQUENCY (BCD)",
+    "page": 11,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 12,
+        "name": "ILS CATEGORY"
+      },
+      {
+        "first": 13,
+        "last": 14,
+        "name": "SPARES"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "0.01 MHZ"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "0.1 MHZ"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "1 MHZ"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "10 MHZ"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "033",
+    "equipment": [
+      "10"
+    ],
+    "name": "ILS FREQUENCY (BCD)",
+    "page": 11,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 12,
+        "name": "ILS CATEGORY"
+      },
+      {
+        "first": 13,
+        "last": 14,
+        "name": "SPARES"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "0.01 MHZ"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "0.1 MHZ"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "1 MHZ"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "10 MHZ"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "034G",
+    "equipment": [
+      "02"
+    ],
+    "name": "VOR/ILS FREQUENCY (BCD)",
+    "page": 11,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "MARKER SENSITIVITY"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "LAST TUNE SOURCE (NOTE 1)"
+      },
+      {
+        "first": 13,
+        "last": 13,
+        "name": "VOR DIG BEARING FILTER (NOTE 2)"
+      },
+      {
+        "first": 14,
+        "last": 14,
+        "name": "ILS MODE"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "HUNDREDTHS OF MHZ"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENTHS OF MHZ"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "UNITS OF MHZ"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "TENS OF MHZ"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "034G",
+    "equipment": [
+      "10"
+    ],
+    "name": "VOR/ILS FREQUENCY (BCD)",
+    "page": 11,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "MARKER SENSITIVITY"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "LAST TUNE SOURCE (NOTE 1)"
+      },
+      {
+        "first": 13,
+        "last": 13,
+        "name": "VOR DIG BEARING FILTER (NOTE 2)"
+      },
+      {
+        "first": 14,
+        "last": 14,
+        "name": "ILS MODE"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "HUNDREDTHS OF MHZ"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENTHS OF MHZ"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "UNITS OF MHZ"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "TENS OF MHZ"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "034G",
+    "equipment": [
+      "11"
+    ],
+    "name": "VOR/ILS FREQUENCY (BCD) (NOTE 1)",
+    "page": 11,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "MARKER SENSITIVITY"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "LAST TUNE SOURCE (NOTE 1)"
+      },
+      {
+        "first": 13,
+        "last": 13,
+        "name": "VOR DIG BEARING FILTER (NOTE 2)"
+      },
+      {
+        "first": 14,
+        "last": 14,
+        "name": "ILS MODE"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "HUNDREDTHS OF MHZ"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENTHS OF MHZ"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "UNITS OF MHZ"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "TENS OF MHZ"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "035G",
+    "equipment": [
+      "02"
+    ],
+    "name": "DME FREQUENCY (BCD)",
+    "page": 12,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 13,
+        "name": "DME MODE"
+      },
+      {
+        "first": 14,
+        "last": 15,
+        "name": "NAV MODE"
+      },
+      {
+        "first": 16,
+        "last": 16,
+        "name": "DISPLAY"
+      },
+      {
+        "first": 17,
+        "last": 17,
+        "name": "IDENT"
+      },
+      {
+        "first": 18,
+        "last": 18,
+        "name": "0.05 MHz"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENTHS OF MHZ"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "UNITS OF MHZ"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "TENS OF MHZ"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "035G",
+    "equipment": [
+      "09"
+    ],
+    "name": "DME FREQUENCY (BCD)",
+    "page": 12,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 13,
+        "name": "DME MODE"
+      },
+      {
+        "first": 14,
+        "last": 15,
+        "name": "NAV MODE"
+      },
+      {
+        "first": 16,
+        "last": 16,
+        "name": "DISPLAY"
+      },
+      {
+        "first": 17,
+        "last": 17,
+        "name": "IDENT"
+      },
+      {
+        "first": 18,
+        "last": 18,
+        "name": "0.05 MHz"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENTHS OF MHZ"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "UNITS OF MHZ"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "TENS OF MHZ"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "040",
+    "equipment": [],
+    "name": "UHF FREQUENCY (BCD)",
+    "page": 47,
+    "section": "אינדקס",
+    "fields": [],
+    "note": "הרשומה מופיעה באינדקס. נדרשת מפת ביטים מתאימה לפני קידוד."
+  },
+  {
+    "code": "041",
+    "equipment": [
+      "02"
+    ],
+    "name": "SET POSITION LATITUDE (BCD)",
+    "page": 13,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 12,
+        "name": "TENTHS OF MINUTES"
+      },
+      {
+        "first": 13,
+        "last": 16,
+        "name": "UNITS OF MINUTES"
+      },
+      {
+        "first": 17,
+        "last": 20,
+        "name": "TENS OF MINUTES"
+      },
+      {
+        "first": 21,
+        "last": 24,
+        "name": "UNITS OF DEGREES"
+      },
+      {
+        "first": 25,
+        "last": 28,
+        "name": "TENS OF DEGREES"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "HUNDREDS OF DEGREES"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "042",
+    "equipment": [
+      "02"
+    ],
+    "name": "SET POSITION LONGITUDE (BCD)",
+    "page": 13,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 12,
+        "name": "TENTHS OF MINUTES"
+      },
+      {
+        "first": 13,
+        "last": 16,
+        "name": "UNITS OF MINUTES"
+      },
+      {
+        "first": 17,
+        "last": 20,
+        "name": "TENS OF MINUTES"
+      },
+      {
+        "first": 21,
+        "last": 24,
+        "name": "UNITS OF DEGREES"
+      },
+      {
+        "first": 25,
+        "last": 28,
+        "name": "TENS OF DEGREES"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "HUNDREDS OF DEGREES"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "043",
+    "equipment": [
+      "02"
+    ],
+    "name": "SET MAGNETIC HEADING (BCD)",
+    "page": 14,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 18,
+        "name": "SPARES"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "UNITS OF DEGREES"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "TENS OF DEGREES"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "HUNDREDS OF DEGREES"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "060P",
+    "equipment": [
+      "02"
+    ],
+    "name": "OMEGA DATA SELECT (BNR) (AlliedSignal)",
+    "page": 14,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 24,
+        "name": "BINARY ADDRESS (BIT 24 MSB)"
+      },
+      {
+        "first": 25,
+        "last": 26,
+        "name": "RELANE BITS"
+      },
+      {
+        "first": 27,
+        "last": 27,
+        "name": "RHO RHO UPDATING"
+      },
+      {
+        "first": 28,
+        "last": 28,
+        "name": "FULL RESTART BIT"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SPARE"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "061P",
+    "equipment": [
+      "02"
+    ],
+    "name": "COVARIANCE DATA (BNR) (AlliedSignal)",
+    "page": 14,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 18,
+        "name": "MANTISSA (IEEE FLT. PNT.)"
+      },
+      {
+        "first": 19,
+        "last": 26,
+        "name": "EXPONENT (IEEE FLT. PNT.)"
+      },
+      {
+        "first": 27,
+        "last": 27,
+        "name": "SIGN"
+      },
+      {
+        "first": 28,
+        "last": 29,
+        "name": "TERM IDENT"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "074G",
+    "equipment": [
+      "02"
+    ],
+    "name": "DATA RECORD HEADER (BNR)",
+    "page": 14,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 15,
+        "name": "TOTAL BNR NUMBER OF RECORDS (127)"
+      },
+      {
+        "first": 16,
+        "last": 20,
+        "name": "SPARES"
+      },
+      {
+        "first": 21,
+        "last": 21,
+        "name": "PRIOR RECORD CHANGE (NOTE)"
+      },
+      {
+        "first": 22,
+        "last": 29,
+        "name": "SPARES"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "075G",
+    "equipment": [
+      "02"
+    ],
+    "name": "ACTIVE WAYPOINT FROM/TO DATA (DSC)",
+    "page": 15,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 9,
+        "name": "AUTO/LEG / MAN/OBS"
+      },
+      {
+        "first": 10,
+        "last": 10,
+        "name": "MAG/TRUE REFERENCE"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "RADAR WPT DISPLAYED"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "LAT/LON / ILS MODE"
+      },
+      {
+        "first": 13,
+        "last": 16,
+        "name": "TO WPT BCD MS BYTE"
+      },
+      {
+        "first": 17,
+        "last": 20,
+        "name": "FROM WPT BCD MS BYTE"
+      },
+      {
+        "first": 21,
+        "last": 24,
+        "name": "TO WPT BCD LS BYTE"
+      },
+      {
+        "first": 25,
+        "last": 28,
+        "name": "FROM WPT BCD LS BYTE"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SPARE"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "100",
+    "equipment": [
+      "11"
+    ],
+    "name": "SELECTED COURSE 1 (BNR)",
+    "page": 15,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE (180 / 4,096)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "100",
+    "equipment": [
+      "25"
+    ],
+    "name": "Selected Course",
+    "page": 60,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "100G",
+    "equipment": [
+      "02"
+    ],
+    "name": "SELECTED COURSE 1 (BNR)",
+    "page": 15,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "HSI CRS SEL MASTER CONTROL"
+      },
+      {
+        "first": 12,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE (180 / 4,096)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "101G",
+    "equipment": [
+      "02"
+    ],
+    "name": "SELECTED HEADING (BNR)",
+    "page": 15,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "DATA CHANGE BIT (NOTE)"
+      },
+      {
+        "first": 12,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE (180 / 4,096)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "101G",
+    "equipment": [
+      "25"
+    ],
+    "name": "SELECTED HEADING (BNR)",
+    "page": 16,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "DATA CHANGE BIT (NOTE)"
+      },
+      {
+        "first": 12,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE (180 /4 ,096)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "101G",
+    "equipment": [
+      "25"
+    ],
+    "name": "Selected Heading",
+    "page": 60,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per GAMA 429"
+  },
+  {
+    "code": "102",
+    "equipment": [
+      "25"
+    ],
+    "name": "Selected Altitude",
+    "page": 60,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "102G",
+    "equipment": [
+      "02"
+    ],
+    "name": "SELECTED ALTITUDE (BNR)",
+    "page": 16,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "ALTITUDE SELECT KNOB"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "ALTITUDE ALERT"
+      },
+      {
+        "first": 13,
+        "last": 28,
+        "name": "BINARY FEET (65,536 / 65,536)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "105",
+    "equipment": [
+      "10"
+    ],
+    "name": "SELECTED RUNWAY HEADING (BNR)",
+    "page": 16,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 17,
+        "name": "SPARES"
+      },
+      {
+        "first": 18,
+        "last": 28,
+        "name": "BINARY ANGLE (180 / 4,096)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "110",
+    "equipment": [
+      "11"
+    ],
+    "name": "SELECTED COURSE 2 (BNR)",
+    "page": 16,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE (180 / 4,096)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "113G",
+    "equipment": [
+      "02"
+    ],
+    "name": "MESSAGE CHECKSUM (BNR)",
+    "page": 16,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 29,
+        "name": "BINARY MESSAGE CHECKSUM (NOTE)"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "114",
+    "equipment": [
+      "02"
+    ],
+    "name": "DESIRED TRACK (TRUE) (BNR)",
+    "page": 17,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE (180 / 4,096)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "115",
+    "equipment": [
+      "02"
+    ],
+    "name": "WAYPOINT BEARING (TRUE) (BNR)",
+    "page": 17,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE (180 / 4,096)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "116G",
+    "equipment": [
+      "02"
+    ],
+    "name": "CROSS TRACK DISTANCE (BNR)",
+    "page": 17,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 13,
+        "name": "RESERVED NAUT MI (128 / 262,144) (NOTE)"
+      },
+      {
+        "first": 14,
+        "last": 28,
+        "name": "BINARY NAUT MI (128 / 32,768)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "117G",
+    "equipment": [
+      "02"
+    ],
+    "name": "VERTICAL DEVIATION (BNR)",
+    "page": 17,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "ALTITUDE GREATER THAN 1000 FT"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "VNAV BENDOVER DIRECT’N (NOTE 1)"
+      },
+      {
+        "first": 13,
+        "last": 13,
+        "name": "VNAV BENDOVER"
+      },
+      {
+        "first": 14,
+        "last": 14,
+        "name": "VNAV ARM ENABLE/ALERT (NOTE 2)"
+      },
+      {
+        "first": 15,
+        "last": 28,
+        "name": "BINARY FEET (*16,384 / 16,384)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "121",
+    "equipment": [
+      "02"
+    ],
+    "name": "HORIZONTAL COMMAND (TO AUTOPILOT) (BNR)",
+    "page": 18,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "SPARES"
+      },
+      {
+        "first": 15,
+        "last": 28,
+        "name": "BINARY ANGLE (180 / 16,384)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "122G",
+    "equipment": [
+      "02"
+    ],
+    "name": "VERTICAL COMMAND (TO AUTOPILOT) (BNR)",
+    "page": 18,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "ALT SEL LVL OFF INTERVENT'N"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "VERTICAL TRACK ALERT HORN"
+      },
+      {
+        "first": 13,
+        "last": 13,
+        "name": "VERT TRK ALRT ANN. (NOTE)"
+      },
+      {
+        "first": 14,
+        "last": 14,
+        "name": "FMS VNAV CAPTURE / TRACK"
+      },
+      {
+        "first": 15,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE (180 / 4,096)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "123",
+    "equipment": [
+      "02"
+    ],
+    "name": "THROTTLE COMMAND (BNR)",
+    "page": 18,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 28,
+        "name": "BINARY DEG/SEC (256 / 262,144)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "125",
+    "equipment": [
+      "02"
+    ],
+    "name": "GREENWICH MEAN TIME (BCD)",
+    "page": 18,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "TENTHS OF MINUTES"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "UNITS OF MINUTES"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENS OF MINUTES"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "UNITS OF HOURS"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "TENS OF HOURS"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "147G",
+    "equipment": [
+      "02"
+    ],
+    "name": "MAGNETIC VARIATION (BNR)",
+    "page": 19,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "SOURCE OF DATA"
+      },
+      {
+        "first": 12,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE (*180 / 4,096) (NOTE)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "150",
+    "equipment": [
+      "02"
+    ],
+    "name": "GREENWICH MEAN TIME (BNR)",
+    "page": 19,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "SPARE"
+      },
+      {
+        "first": 12,
+        "last": 17,
+        "name": "BINARY SECONDS (0-59)"
+      },
+      {
+        "first": 18,
+        "last": 23,
+        "name": "BINARY MINUTES (0-59)"
+      },
+      {
+        "first": 24,
+        "last": 28,
+        "name": "BINARY HOURS (0-23)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "157P",
+    "equipment": [
+      "06"
+    ],
+    "name": "NORMALIZED ANGLE OF ATTACK (BNR) (AlliedSignal)",
+    "page": 19,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 16,
+        "name": "SPARE"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "NORMALIZED AOA (2.0 / 4,096)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "162G",
+    "equipment": [
+      "12"
+    ],
+    "name": "ADF BEARING (BNR)",
+    "page": 19,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "DISPLAY ADF DEVIATION"
+      },
+      {
+        "first": 12,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE (180 / 4,096)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "163G",
+    "equipment": [
+      "02"
+    ],
+    "name": "WIND ON NOSE (BNR)",
+    "page": 19,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 19,
+        "name": "SPARES"
+      },
+      {
+        "first": 20,
+        "last": 28,
+        "name": "BINARY KNOTS (*256 / 512)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "173",
+    "equipment": [
+      "10"
+    ],
+    "name": "LOCALIZER DEVIATION (BNR)",
+    "page": 20,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "TUNE INHIBIT"
+      },
+      {
+        "first": 12,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY DDM (0.4 / 4,096) (NOTE)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "174",
+    "equipment": [
+      "10"
+    ],
+    "name": "GLIDESLOPE DEVIATION (BNR)",
+    "page": 20,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "TUNE INHIBIT"
+      },
+      {
+        "first": 12,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY DDM (0.8 / 4,096) (NOTE)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "202",
+    "equipment": [
+      "02"
+    ],
+    "name": "DME DISTANCE (BNR)",
+    "page": 20,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "MEMORY"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "FOREGROUND"
+      },
+      {
+        "first": 13,
+        "last": 28,
+        "name": "BINARY NAUT MI (512 / 65,536)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "202",
+    "equipment": [
+      "09"
+    ],
+    "name": "DME DISTANCE (BNR)",
+    "page": 20,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "MEMORY"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "FOREGROUND"
+      },
+      {
+        "first": 13,
+        "last": 28,
+        "name": "BINARY NAUT MI (512 / 65,536)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "203",
+    "equipment": [
+      "25"
+    ],
+    "name": "Pressure Altitude",
+    "page": 60,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "204",
+    "equipment": [
+      "02"
+    ],
+    "name": "BARO CORRECTED ALTITUDE #1 (BNR)",
+    "page": 20,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "SPARE"
+      },
+      {
+        "first": 12,
+        "last": 28,
+        "name": "BINARY FEET (131,072 / 131,072)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "204",
+    "equipment": [
+      "25"
+    ],
+    "name": "Baro Altitude",
+    "page": 60,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "205",
+    "equipment": [
+      "25"
+    ],
+    "name": "Mach",
+    "page": 60,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "206",
+    "equipment": [
+      "25"
+    ],
+    "name": "Indicated Airspeed",
+    "page": 60,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "210",
+    "equipment": [
+      "02"
+    ],
+    "name": "TRUE AIRSPEED (BNR)",
+    "page": 21,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 13,
+        "name": "SPARES"
+      },
+      {
+        "first": 14,
+        "last": 28,
+        "name": "BINARY KNOTS (2,048 / 32,768)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "210",
+    "equipment": [
+      "25"
+    ],
+    "name": "True Airspeed",
+    "page": 60,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "211",
+    "equipment": [
+      "25"
+    ],
+    "name": "Total Air Temp",
+    "page": 60,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "212",
+    "equipment": [
+      "25"
+    ],
+    "name": "Altitude Rate",
+    "page": 60,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "213",
+    "equipment": [
+      "02"
+    ],
+    "name": "STATIC AIR TEMPERATURE (BNR)",
+    "page": 21,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 17,
+        "name": "SPARES"
+      },
+      {
+        "first": 18,
+        "last": 28,
+        "name": "BINARY DEG C (512 / 2,048)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "213",
+    "equipment": [
+      "25"
+    ],
+    "name": "Static Air Temp",
+    "page": 60,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "222",
+    "equipment": [
+      "02"
+    ],
+    "name": "VOR OMNIBEARING (FROM AIRCRAFT TO STATION) (BNR)",
+    "page": 21,
+    "section": "3.1",
+    "fields": [],
+    "note": "כמה תבניות מופיעות יחד במקור; יש לאמת את שיוך הביטים."
+  },
+  {
+    "code": "222",
+    "equipment": [
+      "10"
+    ],
+    "name": "VOR OMNIBEARING (FROM AIRCRAFT TO STATION) (BNR)",
+    "page": 21,
+    "section": "3.1",
+    "fields": [],
+    "note": "כמה תבניות מופיעות יחד במקור; יש לאמת את שיוך הביטים."
+  },
+  {
+    "code": "222",
+    "equipment": [
+      "11"
+    ],
+    "name": "VOR OMNIBEARING (FROM AIRCRAFT TO STATION) (BNR)",
+    "page": 21,
+    "section": "3.1",
+    "fields": [],
+    "note": "כמה תבניות מופיעות יחד במקור; יש לאמת את שיוך הביטים."
+  },
+  {
+    "code": "222P",
+    "equipment": [
+      "11"
+    ],
+    "name": "VOR RADIAL (FROM STATION TO AIRCRAFT) (BNR) (AlliedSignal)",
+    "page": 21,
+    "section": "3.1",
+    "fields": [],
+    "note": "כמה תבניות מופיעות יחד במקור; יש לאמת את שיוך הביטים."
+  },
+  {
+    "code": "241P",
+    "equipment": [],
+    "name": "NORMALIZED ANGLE OF ATTACK (BNR)",
+    "page": 47,
+    "section": "אינדקס",
+    "fields": [],
+    "note": "הרשומה מופיעה באינדקס. נדרשת מפת ביטים מתאימה לפני קידוד."
+  },
+  {
+    "code": "251G",
+    "equipment": [
+      "02"
+    ],
+    "name": "DISTANCE TO GO (BNR)",
+    "page": 22,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 13,
+        "name": "SPARES"
+      },
+      {
+        "first": 14,
+        "last": 28,
+        "name": "BINARY NAUT MI (4,096 / 32,768)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "252",
+    "equipment": [
+      "02"
+    ],
+    "name": "TIME TO GO (BNR)",
+    "page": 22,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 19,
+        "name": "SPARES"
+      },
+      {
+        "first": 20,
+        "last": 28,
+        "name": "BINARY MINUTES (512 / 512)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "260G",
+    "equipment": [
+      "02"
+    ],
+    "name": "DATE (BCD)",
+    "page": 22,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "YEAR ONES DIGIT"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "YEAR TENS DIGIT"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "MONTH ONES DIGIT"
+      },
+      {
+        "first": 23,
+        "last": 23,
+        "name": "MONTH TENS DIGIT"
+      },
+      {
+        "first": 24,
+        "last": 27,
+        "name": "DAY ONES DIGIT"
+      },
+      {
+        "first": 28,
+        "last": 29,
+        "name": "DAY TENS DIGIT"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "261G",
+    "equipment": [
+      "02"
+    ],
+    "name": "GPS DISCRETE WORD 1",
+    "page": 23,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 12,
+        "name": "SPARE"
+      },
+      {
+        "first": 13,
+        "last": 16,
+        "name": "RESERVED"
+      },
+      {
+        "first": 17,
+        "last": 19,
+        "name": "WAAS APPROACH TYPE"
+      },
+      {
+        "first": 20,
+        "last": 20,
+        "name": "VERT. DEV. (FINAL APPR.)"
+      },
+      {
+        "first": 21,
+        "last": 21,
+        "name": "LAT. DEV SCALING IN TRANSITION"
+      },
+      {
+        "first": 22,
+        "last": 22,
+        "name": "LAT. DEV. (FINAL APPR)"
+      },
+      {
+        "first": 23,
+        "last": 23,
+        "name": "APPR INTEGRITY (FINAL APPR)"
+      },
+      {
+        "first": 24,
+        "last": 24,
+        "name": "GPS INTEGRITY"
+      },
+      {
+        "first": 25,
+        "last": 27,
+        "name": "GPS ANNUNCIATION"
+      },
+      {
+        "first": 28,
+        "last": 29,
+        "name": "SPARE"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "270",
+    "equipment": [
+      "25"
+    ],
+    "name": "DGC Status",
+    "page": 60,
+    "section": "נספח 4",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "OCTAL LABEL 270"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "ONSIDE NAV1 TUNE DISABLE"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "ONSIDE NAV2 TUNE DISABLE"
+      },
+      {
+        "first": 13,
+        "last": 13,
+        "name": "CROSS SIDE NAV1 TUNE DISABLE"
+      },
+      {
+        "first": 14,
+        "last": 14,
+        "name": "CROSS SIDE NAV2 TUNE DISABLE"
+      },
+      {
+        "first": 15,
+        "last": 15,
+        "name": "WEIGHT ON WHEELS"
+      },
+      {
+        "first": 16,
+        "last": 16,
+        "name": "LNAV CAPTURE"
+      },
+      {
+        "first": 17,
+        "last": 17,
+        "name": "LNAV ARM"
+      },
+      {
+        "first": 18,
+        "last": 18,
+        "name": "SPARE"
+      },
+      {
+        "first": 19,
+        "last": 19,
+        "name": "VNAV ARM"
+      },
+      {
+        "first": 20,
+        "last": 20,
+        "name": "SPEED INTERVENTION -- RESERVED"
+      },
+      {
+        "first": 21,
+        "last": 29,
+        "name": "SPARE"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SIGN / STATUS MATRIX"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": "דגלי DGC לפי מפת הביטים בנספח 4. ביט 20 שמור."
+  },
+  {
+    "code": "275G",
+    "equipment": [],
+    "name": "LRN STATUS WORD (DSC)",
+    "page": 48,
+    "section": "אינדקס",
+    "fields": [],
+    "note": "הרשומה מופיעה באינדקס. נדרשת מפת ביטים מתאימה לפני קידוד."
+  },
+  {
+    "code": "277G",
+    "equipment": [
+      "02"
+    ],
+    "name": "CABIN DISPLAY CONTROL DISCRETE (DSC)",
+    "page": 25,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI (if required)"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "PLAY BRIEFING #1"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "PLAY BRIEFING #2"
+      },
+      {
+        "first": 13,
+        "last": 13,
+        "name": "PLAY BRIEFING #3"
+      },
+      {
+        "first": 14,
+        "last": 14,
+        "name": "PLAY BRIEFING #4"
+      },
+      {
+        "first": 15,
+        "last": 15,
+        "name": "PLAY BRIEFING #5"
+      },
+      {
+        "first": 16,
+        "last": 16,
+        "name": "PLAY BRIEFING #6"
+      },
+      {
+        "first": 17,
+        "last": 17,
+        "name": "CANCEL BRIEFING #1"
+      },
+      {
+        "first": 18,
+        "last": 18,
+        "name": "CANCEL BRIEFING #2"
+      },
+      {
+        "first": 19,
+        "last": 19,
+        "name": "CANCEL BRIEFING #3"
+      },
+      {
+        "first": 20,
+        "last": 20,
+        "name": "CANCEL BRIEFING #4"
+      },
+      {
+        "first": 21,
+        "last": 21,
+        "name": "CANCEL BRIEFING #5"
+      },
+      {
+        "first": 22,
+        "last": 22,
+        "name": "CANCEL BRIEFING #6"
+      },
+      {
+        "first": 23,
+        "last": 23,
+        "name": "ANNUNCIATE CABIN MESSAGE (NOTE)"
+      },
+      {
+        "first": 24,
+        "last": 28,
+        "name": "SPARES"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "ALTERNATE FORMAT"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "300G",
+    "equipment": [
+      "02"
+    ],
+    "name": "STN DECLINATION, TYPE AND CLASS (BNR)",
+    "page": 26,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 14,
+        "name": "SPARES"
+      },
+      {
+        "first": 15,
+        "last": 15,
+        "name": "NON COLLOCATED DME (NOTE 1)"
+      },
+      {
+        "first": 16,
+        "last": 16,
+        "name": "TUNED AND RECEIVED"
+      },
+      {
+        "first": 17,
+        "last": 24,
+        "name": "STATION DECLINATION (NOTE 2)"
+      },
+      {
+        "first": 25,
+        "last": 25,
+        "name": "VOR"
+      },
+      {
+        "first": 26,
+        "last": 26,
+        "name": "DME"
+      },
+      {
+        "first": 27,
+        "last": 27,
+        "name": "TACAN"
+      },
+      {
+        "first": 28,
+        "last": 29,
+        "name": "CLASS"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "301G",
+    "equipment": [
+      "02"
+    ],
+    "name": "MESSAGE CHARACTERS 7-9 (BNR)",
+    "page": 26,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 15,
+        "name": "CHARACTER 7"
+      },
+      {
+        "first": 16,
+        "last": 22,
+        "name": "CHARACTER 8"
+      },
+      {
+        "first": 23,
+        "last": 29,
+        "name": "CHARACTER 9"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "302G",
+    "equipment": [
+      "02"
+    ],
+    "name": "MESSAGE CHARACTERS 10-12 (BNR)",
+    "page": 26,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 15,
+        "name": "CHARACTER 10"
+      },
+      {
+        "first": 16,
+        "last": 22,
+        "name": "CHARACTER 11"
+      },
+      {
+        "first": 23,
+        "last": 29,
+        "name": "CHARACTER 12"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "303",
+    "equipment": [],
+    "name": "Message Length/Type/Number                   Change to Existing Label 303",
+    "page": 84,
+    "section": "נספח 7",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 12,
+        "name": "WORDS IN MESSAGE"
+      },
+      {
+        "first": 13,
+        "last": 15,
+        "name": "WAYPOINT/STATION TYPE (INCLUDES ‘NO SYMBOL’)"
+      },
+      {
+        "first": 16,
+        "last": 16,
+        "name": "DATA RECORD"
+      },
+      {
+        "first": 17,
+        "last": 23,
+        "name": "BINARY WAYPOINT NUMBER"
+      },
+      {
+        "first": 24,
+        "last": 24,
+        "name": "FMS PLAN MODE"
+      },
+      {
+        "first": 25,
+        "last": 25,
+        "name": "WAYPOINT AT PLAN CENTER"
+      },
+      {
+        "first": 26,
+        "last": 26,
+        "name": "GAP FOLLOWS (DISCONTINUITY)"
+      },
+      {
+        "first": 27,
+        "last": 27,
+        "name": "MULTI-WAYPOINT-RECORD GRAPHIC PATTERN"
+      },
+      {
+        "first": 28,
+        "last": 29,
+        "name": "SPARE"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "303G",
+    "equipment": [
+      "02"
+    ],
+    "name": "MESSAGE LENGTH/TYPE/NUMBER (BNR)",
+    "page": 27,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 12,
+        "name": "WORDS IN MESSAGE"
+      },
+      {
+        "first": 13,
+        "last": 15,
+        "name": "WAYPOINT/STATION TYPE"
+      },
+      {
+        "first": 16,
+        "last": 16,
+        "name": "DATA RECORD"
+      },
+      {
+        "first": 17,
+        "last": 23,
+        "name": "BINARY WAYPOINT NUMBER"
+      },
+      {
+        "first": 24,
+        "last": 24,
+        "name": "FMS PLAN MODE"
+      },
+      {
+        "first": 25,
+        "last": 25,
+        "name": "WAYPOINT AT PLAN CENTER"
+      },
+      {
+        "first": 26,
+        "last": 26,
+        "name": "FLIGHT PLAN GAP FOLLOWS"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "SPARES"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "304G",
+    "equipment": [
+      "02"
+    ],
+    "name": "MESSAGE CHARACTERS 1-3 (BNR)",
+    "page": 27,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 15,
+        "name": "CHARACTER 1"
+      },
+      {
+        "first": 16,
+        "last": 22,
+        "name": "CHARACTER 2"
+      },
+      {
+        "first": 23,
+        "last": 29,
+        "name": "CHARACTER 3"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "305G",
+    "equipment": [
+      "02"
+    ],
+    "name": "MESSAGE CHARACTERS 4-6 (BNR)",
+    "page": 27,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 15,
+        "name": "CHARACTER 4"
+      },
+      {
+        "first": 16,
+        "last": 22,
+        "name": "CHARACTER 5"
+      },
+      {
+        "first": 23,
+        "last": 29,
+        "name": "CHARACTER 6"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "306",
+    "equipment": [
+      "25"
+    ],
+    "name": "Designator Latitude",
+    "page": 61,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per GAMA 429"
+  },
+  {
+    "code": "306G",
+    "equipment": [
+      "02"
+    ],
+    "name": "NAV/WPT/AP LATITUDE (BNR)",
+    "page": 27,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 28,
+        "name": "BINARY ANGLE (*180/1048576)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "307",
+    "equipment": [
+      "25"
+    ],
+    "name": "Designator Longitude",
+    "page": 61,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per GAMA 429"
+  },
+  {
+    "code": "307G",
+    "equipment": [
+      "02"
+    ],
+    "name": "NAV/WPT/AP LONGITUDE (BNR)",
+    "page": 27,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 28,
+        "name": "BINARY ANGLE (*180/1048576)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "310",
+    "equipment": [
+      "02"
+    ],
+    "name": "PRESENT POSITION LATITUDE (BNR)",
+    "page": 28,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 28,
+        "name": "BINARY ANGLE (*180/1048576)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "311",
+    "equipment": [
+      "02"
+    ],
+    "name": "PRESENT POSITION LONGITUDE (BNR)",
+    "page": 28,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 28,
+        "name": "BINARY ANGLE (*180/1048576)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "312",
+    "equipment": [
+      "02"
+    ],
+    "name": "GROUND SPEED (BNR)",
+    "page": 28,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 13,
+        "name": "SPARES"
+      },
+      {
+        "first": 14,
+        "last": 28,
+        "name": "BINARY KNOTS (*4096/32768)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "313",
+    "equipment": [
+      "02"
+    ],
+    "name": "TRACK ANGLE (TRUE) (BNR)",
+    "page": 28,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE (*180/4096)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "314",
+    "equipment": [
+      "02"
+    ],
+    "name": "TRUE HEADING (BNR)",
+    "page": 28,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 13,
+        "name": "SPARES"
+      },
+      {
+        "first": 14,
+        "last": 28,
+        "name": "BINARY ANGLE (*180/32768)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "314",
+    "equipment": [
+      "25"
+    ],
+    "name": "True Heading",
+    "page": 61,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "315",
+    "equipment": [
+      "02"
+    ],
+    "name": "WIND SPEED (BNR)",
+    "page": 28,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 20,
+        "name": "SPARES"
+      },
+      {
+        "first": 21,
+        "last": 28,
+        "name": "BINARY KNOTS (*256/256)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "316",
+    "equipment": [
+      "02"
+    ],
+    "name": "WIND ANGLE (TRUE) (BNR)",
+    "page": 29,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 20,
+        "name": "SPARES"
+      },
+      {
+        "first": 21,
+        "last": 28,
+        "name": "BINARY ANGLE (*180/256)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "320",
+    "equipment": [
+      "02"
+    ],
+    "name": "MAGNETIC HEADING (BNR)",
+    "page": 29,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 13,
+        "name": "SPARES"
+      },
+      {
+        "first": 14,
+        "last": 28,
+        "name": "BINARY ANGLE (*180/32768)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "320",
+    "equipment": [
+      "25"
+    ],
+    "name": "Magnetic Heading",
+    "page": 61,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "321",
+    "equipment": [
+      "02"
+    ],
+    "name": "DRIFT ANGLE (BNR)",
+    "page": 29,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE (*180/4096)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "324",
+    "equipment": [
+      "25"
+    ],
+    "name": "Pitch Attitude",
+    "page": 61,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "325",
+    "equipment": [
+      "25"
+    ],
+    "name": "Roll Attitude",
+    "page": 61,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "326G",
+    "equipment": [
+      "02"
+    ],
+    "name": "LATERAL SCALE FACTOR (BNR)",
+    "page": 29,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 13,
+        "name": "RESERVED NAUT MI (128 / 262,144) (NOTE)"
+      },
+      {
+        "first": 14,
+        "last": 28,
+        "name": "BINARY FULL SCALE DISTANCE NM (*128/32,768)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "327G",
+    "equipment": [
+      "02"
+    ],
+    "name": "VERTICAL SCALE FACTOR (BNR)",
+    "page": 29,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 13,
+        "name": "RESERVED"
+      },
+      {
+        "first": 14,
+        "last": 28,
+        "name": "BINARY FULL SCALE DISTANCE FT (*2048/32,768)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "330",
+    "equipment": [],
+    "name": "CONIC ARC INBOUND COURSE (BNR)",
+    "page": 85,
+    "section": "נספח 7",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SPARES"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "ARC DIRECTION"
+      },
+      {
+        "first": 12,
+        "last": 13,
+        "name": "SPARES"
+      },
+      {
+        "first": 14,
+        "last": 28,
+        "name": "BINARY ANGLE (*180/32768)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "331",
+    "equipment": [],
+    "name": "CONIC ARC RADIUS (BNR)",
+    "page": 85,
+    "section": "נספח 7",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 13,
+        "name": "SPARES"
+      },
+      {
+        "first": 14,
+        "last": 28,
+        "name": "BINARY NM (*256/32768)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SPARE"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "332",
+    "equipment": [],
+    "name": "CONIC ARC COURSE CHANGE ANGLE (BNR)",
+    "page": 85,
+    "section": "נספח 7",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 13,
+        "name": "SPARES"
+      },
+      {
+        "first": 14,
+        "last": 28,
+        "name": "BINARY ANGLE (*180/32768)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "333",
+    "equipment": [
+      "25"
+    ],
+    "name": "Body Normal Accel",
+    "page": 61,
+    "section": "נספח 4",
+    "fields": [],
+    "note": "All Else Per A429"
+  },
+  {
+    "code": "351G",
+    "equipment": [
+      "02"
+    ],
+    "name": "DISTANCE TO DESTINATION (VIA FLIGHT PLAN) (BNR)",
+    "page": 30,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 28,
+        "name": "BINARY NM (*32768/262144)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "352G",
+    "equipment": [
+      "02"
+    ],
+    "name": "ESTIMATED TIME TO DESTINATION (VIA FLIGHT PLAN) (BNR)",
+    "page": 30,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY MINUTES (*4096/4096)"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "353P",
+    "equipment": [
+      "02"
+    ],
+    "name": "DESTINATION LOCAL TIME OFFSET (BCD) (mec)",
+    "page": 30,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "TENTHS OF MINUTES"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "UNITS OF MINUTES"
+      },
+      {
+        "first": 19,
+        "last": 22,
+        "name": "TENS OF MINUTES"
+      },
+      {
+        "first": 23,
+        "last": 26,
+        "name": "UNITS OF HOURS"
+      },
+      {
+        "first": 27,
+        "last": 29,
+        "name": "TENS OF HOURS"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "code": "371",
+    "equipment": [
+      "25"
+    ],
+    "name": "Specific Equipment ID",
+    "page": 61,
+    "section": "נספח 4",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "OCTAL LABEL 371"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "HEX EQUIPMENT ID CODE (LSD) = 05"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "HEX EQUIPMENT ID CODE (MSD) = 02"
+      },
+      {
+        "first": 19,
+        "last": 24,
+        "name": "BINARY COMPANY ID CODE = Per GAMA 429"
+      },
+      {
+        "first": 25,
+        "last": 29,
+        "name": "USER DEFINED OR SPARE"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SIGN / STATUS MATRIX"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": "See Bit Assignments"
+  },
+  {
+    "code": "371G",
+    "equipment": [
+      "02"
+    ],
+    "name": "GEN AV   EQUIPMENT IDENT. CODE (DSC)",
+    "page": 30,
+    "section": "3.1",
+    "fields": [],
+    "note": "לא נמצאה מפת ביטים מלאה לרשומה הזאת בקטעים שחולצו."
+  },
+  {
+    "code": "371G",
+    "equipment": [
+      "09"
+    ],
+    "name": "GEN AV   EQUIPMENT IDENT. CODE (DSC)",
+    "page": 30,
+    "section": "3.1",
+    "fields": [],
+    "note": "לא נמצאה מפת ביטים מלאה לרשומה הזאת בקטעים שחולצו."
+  },
+  {
+    "code": "371G",
+    "equipment": [
+      "10"
+    ],
+    "name": "GEN AV   EQUIPMENT IDENT. CODE (DSC)",
+    "page": 30,
+    "section": "3.1",
+    "fields": [],
+    "note": "לא נמצאה מפת ביטים מלאה לרשומה הזאת בקטעים שחולצו."
+  },
+  {
+    "code": "371G",
+    "equipment": [
+      "11"
+    ],
+    "name": "GEN AV   EQUIPMENT IDENT. CODE (DSC)",
+    "page": 30,
+    "section": "3.1",
+    "fields": [],
+    "note": "לא נמצאה מפת ביטים מלאה לרשומה הזאת בקטעים שחולצו."
+  },
+  {
+    "code": "371G",
+    "equipment": [
+      "12"
+    ],
+    "name": "GEN AV   EQUIPMENT IDENT. CODE (DSC)",
+    "page": 30,
+    "section": "3.1",
+    "fields": [],
+    "note": "לא נמצאה מפת ביטים מלאה לרשומה הזאת בקטעים שחולצו."
+  },
+  {
+    "code": "371G",
+    "equipment": [
+      "16"
+    ],
+    "name": "GEN AV   EQUIPMENT IDENT. CODE (DSC)",
+    "page": 30,
+    "section": "3.1",
+    "fields": [],
+    "note": "לא נמצאה מפת ביטים מלאה לרשומה הזאת בקטעים שחולצו."
+  },
+  {
+    "code": "371G",
+    "equipment": [
+      "18"
+    ],
+    "name": "GEN AV EQUIPMENT IDENT. CODE (DSC)",
+    "page": 31,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 14,
+        "name": "EQUIPMENT ID LSD"
+      },
+      {
+        "first": 15,
+        "last": 18,
+        "name": "EQUIPMENT ID MSD"
+      },
+      {
+        "first": 19,
+        "last": 24,
+        "name": "COMPANY ID"
+      },
+      {
+        "first": 25,
+        "last": 29,
+        "name": "COMPANY PRIVATE USE"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": "קוד חברה 1–31 מתועד. השימוש בביטים 25–29 נקבע במפרט היצרן."
+  }
+]
