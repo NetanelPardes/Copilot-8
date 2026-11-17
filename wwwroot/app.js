@@ -1,11 +1,21 @@
 const $ = id => document.getElementById(id);
-const editor = $('editor');
-const trafficPane = $('traffic').closest('.traffic');
 
+const editor = $('editor');
+const trafficBody = $('traffic');
+const trafficPane = trafficBody.closest('.traffic');
 const history = [];
 const recordedEvents = [];
+
 const maxVisibleEvents = 1000;
 const maxRecordedEvents = 20000;
+
+const localTime = new Intl.DateTimeFormat('he-IL', {
+    hour12: false,
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    fractionalSecondDigits: 3
+});
 
 let labels = [];
 let port = null;
@@ -59,8 +69,12 @@ function bind(id, eventName, errorId, action) {
 }
 
 function labelKey(label) {
-    return [label.code, (label.equipment ?? []).join(','),
-        label.section ?? '', label.page ?? ''].join('|');
+    return [
+        label.code,
+        (label.equipment ?? []).join(','),
+        label.section ?? '',
+        label.page ?? ''
+    ].join('|');
 }
 
 function labelTitle(label) {
@@ -83,6 +97,7 @@ async function loadLabels() {
     }
 
     labels = await response.json();
+
     for (const label of labels) {
         $('label').add(new Option(labelTitle(label), labelKey(label)));
     }
@@ -146,7 +161,7 @@ function openEditor(cycle = null) {
     selectLabel();
 
     input?.editor?.forEach((saved, index) => {
-        // בחירת מצב עשויה להחליף את השדות הבאים בטופס.
+        // שינוי מצב יכול להחליף את השדות הבאים בטופס.
         const field = fieldInputs()[index];
         if (!field) return;
 
@@ -219,20 +234,16 @@ function renderActive(active) {
     }
 }
 
-const localTime = new Intl.DateTimeFormat('he-IL', {
-    hour12: false,
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    fractionalSecondDigits: 3
-});
-
 function addTrafficRow(event) {
     const direction = $('direction').value;
-    if (direction && direction !== event.direction) return;
+    const labelFilter = $('filter-label').value.trim();
 
-    const row = $('traffic').insertRow();
+    if (direction && direction !== event.direction) return;
+    if (labelFilter && !String(event.label ?? '').startsWith(labelFilter)) return;
+
+    const row = trafficBody.insertRow();
     row.dataset.direction = event.direction;
+    row.dataset.sequence = String(event.sequence);
     row.tabIndex = 0;
 
     cell(row, event.sequence);
@@ -255,12 +266,18 @@ function addTrafficRow(event) {
 }
 
 function scrollToLatest() {
-    if ($('follow').checked) trafficPane.scrollTop = trafficPane.scrollHeight;
+    if ($('follow').checked) {
+        trafficPane.scrollTop = trafficPane.scrollHeight;
+    }
 }
 
 function renderTraffic() {
-    $('traffic').replaceChildren();
-    history.forEach(addTrafficRow);
+    trafficBody.replaceChildren();
+
+    for (const event of history) {
+        addTrafficRow(event);
+    }
+
     scrollToLatest();
 }
 
@@ -295,8 +312,13 @@ async function loadPorts() {
 
     select.replaceChildren(new Option('בחר פורט', ''));
 
-    for (const name of names) select.add(new Option(name, name));
-    if (names.includes(previous)) select.value = previous;
+    for (const name of names) {
+        select.add(new Option(name, name));
+    }
+
+    if (names.includes(previous)) {
+        select.value = previous;
+    }
 
     $('connection-error').textContent = names.length ? '' : 'לא נמצאו פורטים.';
 }
@@ -325,35 +347,41 @@ function finishRecording() {
     exportRecording();
 }
 
+function recordEvent(event) {
+    if (!recordingOn) return;
+
+    const time = new Date(event.time);
+    if (time < recordingStartedAt || (recordingEndedAt && time > recordingEndedAt)) {
+        return;
+    }
+
+    recordedEvents.push(event);
+
+    if (recordedEvents.length >= maxRecordedEvents) {
+        recordingEndedAt ??= time;
+        hasGap = true;
+        finishRecording();
+
+        $('notice').textContent =
+            'ההקלטה נעצרה לאחר 20,000 אירועים. אפשר להוריד את הקובץ שוב.';
+    }
+}
+
 function appendEvents(events) {
     for (const event of events) {
         cursor = event.sequence;
         history.push(event);
+        recordEvent(event);
         addTrafficRow(event);
-
-        const time = new Date(event.time);
-        if (recordingOn && time >= recordingStartedAt
-            && (!recordingEndedAt || time <= recordingEndedAt)) {
-            recordedEvents.push(event);
-
-            if (recordedEvents.length >= maxRecordedEvents) {
-                recordingEndedAt ??= time;
-                hasGap = true;
-                finishRecording();
-
-                $('notice').textContent =
-                    'ההקלטה נעצרה לאחר 20,000 אירועים. אפשר להוריד את הקובץ שוב.';
-            }
-        }
     }
 
     if (history.length > maxVisibleEvents) {
         const removed = history.splice(0, history.length - maxVisibleEvents);
         const lastRemoved = removed.at(-1).sequence;
-        const rows = $('traffic').rows;
 
-        while (rows.length && Number(rows[0].cells[0].textContent) <= lastRemoved) {
-            rows[0].remove();
+        while (trafficBody.rows.length
+            && Number(trafficBody.rows[0].dataset.sequence) <= lastRemoved) {
+            trafficBody.rows[0].remove();
         }
     }
 
@@ -389,7 +417,9 @@ async function poll() {
             $('notice').textContent = 'חלק מהאירועים כבר יצאו ממאגר השרת.';
         }
 
-        if (snapshot.events.length) appendEvents(snapshot.events);
+        if (snapshot.events.length) {
+            appendEvents(snapshot.events);
+        }
 
         if (recordingOn && recordingEndedAt && requestedAt >= recordingEndedAt
             && snapshot.events.length < 500) {
@@ -408,6 +438,7 @@ async function poll() {
 $('label').addEventListener('change', selectLabel);
 $('mode').addEventListener('change', setMode);
 $('direction').addEventListener('change', renderTraffic);
+$('filter-label').addEventListener('input', renderTraffic);
 $('search').addEventListener('input', renderDictionary);
 $('new-message').addEventListener('click', () => openEditor());
 $('open-dictionary').addEventListener('click', () => $('dictionary-dialog').showModal());
@@ -462,8 +493,11 @@ bind('editor', 'submit', 'editor-error', async () => {
         }))
     };
 
-    await api(editing ? 'messages/' + editing : 'messages',
-        editing ? 'PUT' : 'POST', payload);
+    await api(
+        editing ? 'messages/' + editing : 'messages',
+        editing ? 'PUT' : 'POST',
+        payload
+    );
 
     $('editor-dialog').close();
 });
@@ -476,7 +510,9 @@ $('record').addEventListener('click', () => {
         return;
     }
 
-    if (recordedEvents.length && !window.confirm('להחליף את ההקלטה הקיימת?')) return;
+    if (recordedEvents.length && !window.confirm('להחליף את ההקלטה הקיימת?')) {
+        return;
+    }
 
     recordedEvents.length = 0;
     recordingStartedAt = new Date();

@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="styles.css?v=3">
     <script src="gama-fields.js" defer></script>
     <script src="excel.js?v=3" defer></script>
-    <script src="app.js?v=3" defer></script>
+    <script src="app.js?v=5" defer></script>
 </head>
 <body>
 <main>
     <header class="top">
         <h1><bdi>Copilot 8</bdi></h1>
-
         <button id="open-connection" type="button" data-connected="false"
                 aria-haspopup="dialog" aria-controls="connection-dialog">
             מנותק
@@ -31,10 +30,16 @@
 
     <section class="card" aria-labelledby="active-title">
         <h2 id="active-title">שידורים פעילים</h2>
+
         <div class="table-wrap">
             <table>
                 <thead>
-                    <tr><th>Label</th><th>Data מקודד</th><th>תדר</th><th>פעולות</th></tr>
+                    <tr>
+                        <th>Label</th>
+                        <th>Data מקודד</th>
+                        <th>תדר</th>
+                        <th>פעולות</th>
+                    </tr>
                 </thead>
                 <tbody id="active">
                     <tr><td colspan="4">אין שידורים מחזוריים פעילים.</td></tr>
@@ -51,10 +56,16 @@
                 <label class="inline">כיוון
                     <select id="direction">
                         <option value="">הכול</option>
-                        <option>TX</option>
-                        <option>RX</option>
-                        <option>ERROR</option>
+                        <option value="TX">TX</option>
+                        <option value="RX">RX</option>
+                        <option value="ERROR">ERROR</option>
                     </select>
+                </label>
+
+                <label class="inline">סנן לפי Label
+                    <input id="filter-label" type="search" dir="ltr"
+                           inputmode="numeric" maxlength="3"
+                           placeholder="למשל 203" autocomplete="off">
                 </label>
 
                 <button id="record" type="button">התחל הקלטה</button>
@@ -71,8 +82,11 @@
             <table>
                 <thead>
                     <tr>
-                        <th>#</th><th>זמן מקומי</th><th>כיוון</th>
-                        <th>Label</th><th>בתים בהקס</th>
+                        <th>#</th>
+                        <th>זמן מקומי</th>
+                        <th>כיוון</th>
+                        <th>Label</th>
+                        <th>בתים בהקס</th>
                     </tr>
                 </thead>
                 <tbody id="traffic"></tbody>
@@ -107,15 +121,19 @@
         <div class="grid">
             <label>SDI
                 <select id="sdi">
-                    <option value="0">00</option><option value="1">01</option>
-                    <option value="2">10</option><option value="3">11</option>
+                    <option value="0">00</option>
+                    <option value="1">01</option>
+                    <option value="2">10</option>
+                    <option value="3">11</option>
                 </select>
             </label>
 
             <label>SSM
                 <select id="ssm">
-                    <option value="0">00</option><option value="1">01</option>
-                    <option value="2">10</option><option value="3">11</option>
+                    <option value="0">00</option>
+                    <option value="1">01</option>
+                    <option value="2">10</option>
+                    <option value="3">11</option>
                 </select>
             </label>
 
@@ -146,7 +164,9 @@
         <h2 id="connection-title">חיבור UART</h2>
 
         <div class="grid">
-            <label>פורט<select id="port" name="port" required></select></label>
+            <label>פורט
+                <select id="port" name="port" required></select>
+            </label>
 
             <label>Baud rate
                 <input name="baudRate" type="number" min="1" step="1" required>
@@ -155,14 +175,17 @@
             <label>Parity
                 <select name="parity" required>
                     <option value="">בחר לפי המפרט</option>
-                    <option>None</option><option>Even</option><option>Odd</option>
+                    <option>None</option>
+                    <option>Even</option>
+                    <option>Odd</option>
                 </select>
             </label>
 
             <label>ביטי עצירה
                 <select name="stopBits" required>
                     <option value="">בחר לפי המפרט</option>
-                    <option>1</option><option>2</option>
+                    <option>1</option>
+                    <option>2</option>
                 </select>
             </label>
         </div>
@@ -180,9 +203,11 @@
 
 <dialog id="dictionary-dialog" aria-labelledby="dictionary-title">
     <h2 id="dictionary-title">מילון לייבלים</h2>
+
     <label>חיפוש
         <input id="search" type="search" placeholder="מספר, שם או מזהה ציוד">
     </label>
+
     <ul id="dictionary"></ul>
     <button type="button" data-close>סגור</button>
 </dialog>
