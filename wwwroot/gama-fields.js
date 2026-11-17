@@ -157,6 +157,35 @@ function rawFieldEditor(panel, fields) {
     };
 }
 
+function packNumericBnr(ticks, firstBit) {
+    // Build bits 9–29 together, then split them for the existing API.
+    const width = 30 - firstBit;
+    const encoded = (ticks & ((1 << width) - 1)) << (firstBit - 9);
+    return { data: encoded >>> 2, sdi: encoded & 3 };
+}
+
+function renderNumericBnr(panel, profile) {
+    const { title, first, step, minTick, maxTick } = profile;
+    const read = numericControl(panel, title, minTick * step, maxTick * step, step, true);
+    const flags = (profile.flags ?? []).map(([bit, name]) =>
+        ({ bit, read: flagControl(panel, name) }));
+
+    return () => {
+        const value = read();
+        if (value === null) return null;
+
+        const ticks = Math.round(value / step);
+        if (ticks < minTick || ticks > maxTick) return null;
+        const encoded = packNumericBnr(ticks, first);
+
+        for (const flag of flags) {
+            encoded.data |= flag.read() << (flag.bit - 11);
+        }
+
+        return first < 11 ? encoded : encoded.data;
+    };
+}
+
 function renderGamaFields(label) {
     const panel = document.getElementById('gama-fields');
     const labelSelect = document.getElementById('label');
@@ -168,11 +197,15 @@ function renderGamaFields(label) {
     }
 
     labelSelect.setCustomValidity('');
+    document.getElementById('sdi').disabled = Boolean(label?.numericBnr?.first < 11);
     panel.replaceChildren();
     if (!label) return () => null;
 
+    if (label.arincPage) text(panel, `ARINC 429 Part 1-17 · Attachment 2, Table 2 · עמוד מודפס ${label.arincPage}`);
     if (label.page) text(panel, `GAMA 11 · ${label.section} · עמוד PDF ${label.page}`);
     if (label.note) text(panel, label.note);
+
+    if (label.numericBnr) return renderNumericBnr(panel, label.numericBnr);
 
     const match = (code, equipment) => label.code === code
         && label.equipment?.length === 1 && equipment.includes(label.equipment[0])

@@ -180,3 +180,25 @@ tbody tr:nth-child(even) { background: #f7f9fc; }
 @media (max-width: 37rem) {
     .grid { grid-template-columns: 1fr; }
 }
+#editor-dialog[open] {
+    display: flex;
+    height: min(44rem, 90vh);
+}
+
+#editor-dialog > #editor {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+}
+
+#editor-dialog > #editor > :not(#gama-fields) {
+    flex-shrink: 0;
+}
+
+#editor-dialog #gama-fields {
+    flex: 1 1 0;
+    min-height: 0;
+    overflow-y: auto;
+}

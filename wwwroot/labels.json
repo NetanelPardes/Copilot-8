@@ -2098,8 +2098,56 @@
     "name": "Selected Heading",
     "page": 60,
     "section": "נספח 4",
-    "fields": [],
-    "note": "All Else Per GAMA 429"
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "DATA CHANGE"
+      },
+      {
+        "first": 12,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BNR"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": "ביט 11 מקובע ל־0 לפרופיל EFIS לפי GAMA 11 §3.1.",
+    "numericBnr": {
+      "title": "כיוון נבחר במעלות",
+      "first": 17,
+      "step": 0.0439453125,
+      "minTick": -4096,
+      "maxTick": 4095
+    }
   },
   {
     "code": "102",
@@ -3172,13 +3220,123 @@
   {
     "code": "203",
     "equipment": [
+      "006"
+    ],
+    "name": "Pressure Altitude (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "SPARES"
+      },
+      {
+        "first": 12,
+        "last": 28,
+        "name": "BNR"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "numericBnr": {
+      "title": "גובה לחץ ברגל",
+      "first": 12,
+      "step": 1,
+      "minTick": -131072,
+      "maxTick": 131071
+    },
+    "arincPage": 60,
+    "note": ""
+  },
+  {
+    "code": "203",
+    "equipment": [
+      "038"
+    ],
+    "name": "Pressure Altitude (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "SPARES"
+      },
+      {
+        "first": 12,
+        "last": 28,
+        "name": "BNR"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "numericBnr": {
+      "title": "גובה לחץ ברגל",
+      "first": 12,
+      "step": 1,
+      "minTick": -131072,
+      "maxTick": 131071
+    },
+    "arincPage": 60,
+    "note": ""
+  },
+  {
+    "code": "203",
+    "equipment": [
       "25"
     ],
     "name": "Pressure Altitude",
     "page": 60,
     "section": "נספח 4",
     "fields": [],
-    "note": "All Else Per A429"
+    "note": "הגדרת EFIS לציוד 025 מפנה ל־ARINC 429. בטבלה שבמהדורה הזאת נמצא גובה לחץ לציוד 006 ו־038; הרשומות שלהם מופיעות בנפרד."
   },
   {
     "code": "204",
@@ -3406,8 +3564,80 @@
     "name": "VOR OMNIBEARING (FROM AIRCRAFT TO STATION) (BNR)",
     "page": 21,
     "section": "3.1",
-    "fields": [],
-    "note": "כמה תבניות מופיעות יחד במקור; יש לאמת את שיוך הביטים."
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "MARKER BEACON 400 HZ"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "MARKER BEACON 1300 HZ"
+      },
+      {
+        "first": 13,
+        "last": 13,
+        "name": "MARKER BEACON 3000 HZ"
+      },
+      {
+        "first": 14,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": "SDI נלקח מה־Label 034G. יותר מדגל Marker אחד מציין בדיקה עצמית.",
+    "numericBnr": {
+      "title": "מיסב VOR במעלות",
+      "first": 17,
+      "step": 0.0439453125,
+      "minTick": -4096,
+      "maxTick": 4095,
+      "flags": [
+        [
+          11,
+          "Marker 400 Hz"
+        ],
+        [
+          12,
+          "Marker 1300 Hz"
+        ],
+        [
+          13,
+          "Marker 3000 Hz"
+        ]
+      ]
+    }
   },
   {
     "code": "222",
@@ -3417,8 +3647,80 @@
     "name": "VOR OMNIBEARING (FROM AIRCRAFT TO STATION) (BNR)",
     "page": 21,
     "section": "3.1",
-    "fields": [],
-    "note": "כמה תבניות מופיעות יחד במקור; יש לאמת את שיוך הביטים."
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "MARKER BEACON 400 HZ"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "MARKER BEACON 1300 HZ"
+      },
+      {
+        "first": 13,
+        "last": 13,
+        "name": "MARKER BEACON 3000 HZ"
+      },
+      {
+        "first": 14,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": "SDI נלקח מה־Label 034G. יותר מדגל Marker אחד מציין בדיקה עצמית.",
+    "numericBnr": {
+      "title": "מיסב VOR במעלות",
+      "first": 17,
+      "step": 0.0439453125,
+      "minTick": -4096,
+      "maxTick": 4095,
+      "flags": [
+        [
+          11,
+          "Marker 400 Hz"
+        ],
+        [
+          12,
+          "Marker 1300 Hz"
+        ],
+        [
+          13,
+          "Marker 3000 Hz"
+        ]
+      ]
+    }
   },
   {
     "code": "222",
@@ -3428,8 +3730,80 @@
     "name": "VOR OMNIBEARING (FROM AIRCRAFT TO STATION) (BNR)",
     "page": 21,
     "section": "3.1",
-    "fields": [],
-    "note": "כמה תבניות מופיעות יחד במקור; יש לאמת את שיוך הביטים."
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 11,
+        "name": "MARKER BEACON 400 HZ"
+      },
+      {
+        "first": 12,
+        "last": 12,
+        "name": "MARKER BEACON 1300 HZ"
+      },
+      {
+        "first": 13,
+        "last": 13,
+        "name": "MARKER BEACON 3000 HZ"
+      },
+      {
+        "first": 14,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BINARY ANGLE"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": "SDI נלקח מה־Label 034G. יותר מדגל Marker אחד מציין בדיקה עצמית.",
+    "numericBnr": {
+      "title": "מיסב VOR במעלות",
+      "first": 17,
+      "step": 0.0439453125,
+      "minTick": -4096,
+      "maxTick": 4095,
+      "flags": [
+        [
+          11,
+          "Marker 400 Hz"
+        ],
+        [
+          12,
+          "Marker 1300 Hz"
+        ],
+        [
+          13,
+          "Marker 3000 Hz"
+        ]
+      ]
+    }
   },
   {
     "code": "222P",
@@ -3446,10 +3820,54 @@
     "code": "241P",
     "equipment": [],
     "name": "NORMALIZED ANGLE OF ATTACK (BNR)",
-    "page": 47,
-    "section": "אינדקס",
-    "fields": [],
-    "note": "הרשומה מופיעה באינדקס. נדרשת מפת ביטים מתאימה לפני קידוד."
+    "page": 21,
+    "section": "3.1",
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 16,
+        "name": "SPARES"
+      },
+      {
+        "first": 17,
+        "last": 28,
+        "name": "BNR"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": "הגדרה ייעודית למערכת Stall Warning / AOA לפי GAMA 11.",
+    "numericBnr": {
+      "title": "זווית התקפה מנורמלת",
+      "first": 17,
+      "step": 0.00048828125,
+      "minTick": -4096,
+      "maxTick": 4095
+    },
+    "arincPage": null
   },
   {
     "code": "251G",
@@ -4272,8 +4690,41 @@
     "name": "Designator Latitude",
     "page": 61,
     "section": "נספח 4",
-    "fields": [],
-    "note": "All Else Per GAMA 429"
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 28,
+        "name": "BINARY ANGLE"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": "ביטים 9–10 משמשים כחלק מהערך. בקו רוחב טווח ההזנה מוגבל ל־±90°.",
+    "numericBnr": {
+      "title": "קו רוחב במעלות",
+      "first": 9,
+      "step": 0.000171661376953125,
+      "minTick": -524288,
+      "maxTick": 524288
+    }
   },
   {
     "code": "306G",
@@ -4292,7 +4743,7 @@
       {
         "first": 9,
         "last": 28,
-        "name": "BINARY ANGLE (*180/1048576)"
+        "name": "BINARY ANGLE"
       },
       {
         "first": 29,
@@ -4310,7 +4761,14 @@
         "name": "PARITY (ODD)"
       }
     ],
-    "note": ""
+    "note": "ביטים 9–10 משמשים כחלק מהערך. בקו רוחב טווח ההזנה מוגבל ל־±90°.",
+    "numericBnr": {
+      "title": "קו רוחב במעלות",
+      "first": 9,
+      "step": 0.000171661376953125,
+      "minTick": -524288,
+      "maxTick": 524288
+    }
   },
   {
     "code": "307",
@@ -4320,8 +4778,41 @@
     "name": "Designator Longitude",
     "page": 61,
     "section": "נספח 4",
-    "fields": [],
-    "note": "All Else Per GAMA 429"
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 28,
+        "name": "BINARY ANGLE"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": "ביטים 9–10 משמשים כחלק מהערך. בקו רוחב טווח ההזנה מוגבל ל־±90°.",
+    "numericBnr": {
+      "title": "קו אורך במעלות",
+      "first": 9,
+      "step": 0.000171661376953125,
+      "minTick": -1048576,
+      "maxTick": 1048575
+    }
   },
   {
     "code": "307G",
@@ -4340,7 +4831,7 @@
       {
         "first": 9,
         "last": 28,
-        "name": "BINARY ANGLE (*180/1048576)"
+        "name": "BINARY ANGLE"
       },
       {
         "first": 29,
@@ -4358,7 +4849,14 @@
         "name": "PARITY (ODD)"
       }
     ],
-    "note": ""
+    "note": "ביטים 9–10 משמשים כחלק מהערך. בקו רוחב טווח ההזנה מוגבל ל־±90°.",
+    "numericBnr": {
+      "title": "קו אורך במעלות",
+      "first": 9,
+      "step": 0.000171661376953125,
+      "minTick": -1048576,
+      "maxTick": 1048575
+    }
   },
   {
     "code": "310",
@@ -4377,7 +4875,7 @@
       {
         "first": 9,
         "last": 28,
-        "name": "BINARY ANGLE (*180/1048576)"
+        "name": "BINARY ANGLE"
       },
       {
         "first": 29,
@@ -4395,7 +4893,14 @@
         "name": "PARITY (ODD)"
       }
     ],
-    "note": ""
+    "note": "ביטים 9–10 משמשים כחלק מהערך. בקו רוחב טווח ההזנה מוגבל ל־±90°.",
+    "numericBnr": {
+      "title": "קו רוחב במעלות",
+      "first": 9,
+      "step": 0.000171661376953125,
+      "minTick": -524288,
+      "maxTick": 524288
+    }
   },
   {
     "code": "311",
@@ -4414,7 +4919,7 @@
       {
         "first": 9,
         "last": 28,
-        "name": "BINARY ANGLE (*180/1048576)"
+        "name": "BINARY ANGLE"
       },
       {
         "first": 29,
@@ -4432,7 +4937,14 @@
         "name": "PARITY (ODD)"
       }
     ],
-    "note": ""
+    "note": "ביטים 9–10 משמשים כחלק מהערך. בקו רוחב טווח ההזנה מוגבל ל־±90°.",
+    "numericBnr": {
+      "title": "קו אורך במעלות",
+      "first": 9,
+      "step": 0.000171661376953125,
+      "minTick": -1048576,
+      "maxTick": 1048575
+    }
   },
   {
     "code": "312",
@@ -4583,8 +5095,52 @@
     "name": "True Heading",
     "page": 61,
     "section": "נספח 4",
-    "fields": [],
-    "note": "All Else Per A429"
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 18,
+        "name": "SPARES"
+      },
+      {
+        "first": 19,
+        "last": 28,
+        "name": "BNR"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": "",
+    "numericBnr": {
+      "title": "כיוון אמיתי במעלות",
+      "first": 19,
+      "step": 0.17578125,
+      "minTick": -1024,
+      "maxTick": 1023
+    },
+    "arincPage": 67
   },
   {
     "code": "315",
@@ -4735,8 +5291,52 @@
     "name": "Magnetic Heading",
     "page": 61,
     "section": "נספח 4",
-    "fields": [],
-    "note": "All Else Per A429"
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 18,
+        "name": "SPARES"
+      },
+      {
+        "first": 19,
+        "last": 28,
+        "name": "BNR"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": "",
+    "numericBnr": {
+      "title": "כיוון מגנטי במעלות",
+      "first": 19,
+      "step": 0.17578125,
+      "minTick": -1024,
+      "maxTick": 1023
+    },
+    "arincPage": 68
   },
   {
     "code": "321",
@@ -4793,8 +5393,52 @@
     "name": "Pitch Attitude",
     "page": 61,
     "section": "נספח 4",
-    "fields": [],
-    "note": "All Else Per A429"
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 18,
+        "name": "SPARES"
+      },
+      {
+        "first": 19,
+        "last": 28,
+        "name": "BNR"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": "",
+    "numericBnr": {
+      "title": "זווית עלרוד במעלות",
+      "first": 19,
+      "step": 0.17578125,
+      "minTick": -1024,
+      "maxTick": 1023
+    },
+    "arincPage": 68
   },
   {
     "code": "325",
@@ -4804,8 +5448,52 @@
     "name": "Roll Attitude",
     "page": 61,
     "section": "נספח 4",
-    "fields": [],
-    "note": "All Else Per A429"
+    "fields": [
+      {
+        "first": 1,
+        "last": 8,
+        "name": "LABEL"
+      },
+      {
+        "first": 9,
+        "last": 10,
+        "name": "SDI"
+      },
+      {
+        "first": 11,
+        "last": 18,
+        "name": "SPARES"
+      },
+      {
+        "first": 19,
+        "last": 28,
+        "name": "BNR"
+      },
+      {
+        "first": 29,
+        "last": 29,
+        "name": "SIGN"
+      },
+      {
+        "first": 30,
+        "last": 31,
+        "name": "SSM"
+      },
+      {
+        "first": 32,
+        "last": 32,
+        "name": "PARITY (ODD)"
+      }
+    ],
+    "note": "",
+    "numericBnr": {
+      "title": "זווית גלגול במעלות",
+      "first": 19,
+      "step": 0.17578125,
+      "minTick": -1024,
+      "maxTick": 1023
+    },
+    "arincPage": 69
   },
   {
     "code": "326G",
