@@ -1,0 +1,290 @@
+{
+  "nextNumber": 7,
+  "plans": [
+    {
+      "id": "20e75346-263f-4863-aa47-8ddfe4c3421f",
+      "name": "Plan 1",
+      "createdAt": "2026-11-18T13:47:25.4569296+02:00",
+      "revision": 20,
+      "items": [
+        {
+          "id": "b399a8ee-0133-4445-abe9-5049e5c3c9bf",
+          "input": {
+            "profile": "002|02|3.1|7",
+            "label": "002",
+            "data": 157312,
+            "sdi": 0,
+            "ssm": 0,
+            "hertz": 1,
+            "editor": [
+              {
+                "value": "266.8",
+                "checked": false
+              }
+            ],
+            "source": null
+          },
+          "paused": false
+        },
+        {
+          "id": "2919f168-7db7-4d15-980f-ac7e0ddd7582",
+          "input": {
+            "profile": "030G|02|3.1|8",
+            "label": "030",
+            "data": 0,
+            "sdi": 0,
+            "ssm": 0,
+            "hertz": 1,
+            "editor": [
+              {
+                "value": "0",
+                "checked": false
+              },
+              {
+                "value": "0",
+                "checked": false
+              },
+              {
+                "value": "0",
+                "checked": false
+              },
+              {
+                "value": "0",
+                "checked": false
+              },
+              {
+                "value": "0",
+                "checked": false
+              }
+            ],
+            "source": null
+          },
+          "paused": false
+        },
+        {
+          "id": "c8b7294c-3f86-4ff8-850c-7d29a3ae8035",
+          "input": {
+            "profile": "012|09|3.1|7",
+            "label": "012",
+            "data": 286992,
+            "sdi": 0,
+            "ssm": 0,
+            "hertz": 2,
+            "editor": [
+              {
+                "value": "4611",
+                "checked": false
+              }
+            ],
+            "source": null
+          },
+          "paused": false
+        }
+      ]
+    },
+    {
+      "id": "8aa40ad4-702e-4526-9b49-ed719dfeef99",
+      "name": "Plan 3",
+      "createdAt": "2026-11-18T14:16:38.5313974+02:00",
+      "revision": 10,
+      "items": [
+        {
+          "id": "0f4476fc-9314-4e16-babe-84ae793d58db",
+          "input": {
+            "profile": "031G|18|3.1|10",
+            "label": "031",
+            "data": 16900,
+            "sdi": 0,
+            "ssm": 0,
+            "hertz": 1,
+            "editor": [
+              {
+                "value": "on",
+                "checked": false
+              },
+              {
+                "value": "on",
+                "checked": false
+              },
+              {
+                "value": "on",
+                "checked": true
+              },
+              {
+                "value": "on",
+                "checked": false
+              },
+              {
+                "value": "0",
+                "checked": false
+              },
+              {
+                "value": "on",
+                "checked": false
+              },
+              {
+                "value": "on",
+                "checked": false
+              },
+              {
+                "value": "on",
+                "checked": true
+              },
+              {
+                "value": "on",
+                "checked": false
+              },
+              {
+                "value": "on",
+                "checked": false
+              },
+              {
+                "value": "on",
+                "checked": false
+              },
+              {
+                "value": "on",
+                "checked": false
+              },
+              {
+                "value": "on",
+                "checked": true
+              },
+              {
+                "value": "on",
+                "checked": false
+              },
+              {
+                "value": "on",
+                "checked": false
+              },
+              {
+                "value": "on",
+                "checked": false
+              },
+              {
+                "value": "on",
+                "checked": false
+              }
+            ],
+            "source": null
+          },
+          "paused": true
+        }
+      ]
+    },
+    {
+      "id": "c2b01240-15a0-47f0-ad19-d0ebef70c92e",
+      "name": "Plan 4",
+      "createdAt": "2026-11-18T15:25:03.6938508+02:00",
+      "revision": 10,
+      "items": [
+        {
+          "id": "7c931b79-cadb-4a59-af22-f688f4e73faa",
+          "input": {
+            "profile": "002|02|3.1|7",
+            "label": "002",
+            "data": 104240,
+            "sdi": 0,
+            "ssm": 0,
+            "hertz": 3,
+            "editor": [
+              {
+                "value": "197.3",
+                "checked": false
+              }
+            ],
+            "source": null
+          },
+          "paused": true
+        },
+        {
+          "id": "6bce3a85-d43a-4727-8ed3-2dad23e8d745",
+          "input": {
+            "profile": "116G|02|3.1|17",
+            "label": "116",
+            "data": 0,
+            "sdi": 0,
+            "ssm": 0,
+            "hertz": 2,
+            "editor": [
+              {
+                "value": "0",
+                "checked": false
+              },
+              {
+                "value": "on",
+                "checked": false
+              }
+            ],
+            "source": null
+          },
+          "paused": true
+        }
+      ]
+    },
+    {
+      "id": "cf9f4a31-b31f-43b8-8aeb-0feca3566d7f",
+      "name": "Plan 5",
+      "createdAt": "2026-11-18T16:11:42.4969215+02:00",
+      "revision": 2,
+      "items": [
+        {
+          "id": "adfebf93-7fd6-4c6a-91cb-b347716a26d1",
+          "input": {
+            "profile": "017|10|3.1|8",
+            "label": "017",
+            "data": 0,
+            "sdi": 0,
+            "ssm": 0,
+            "hertz": 1,
+            "editor": [
+              {
+                "value": "0",
+                "checked": false
+              }
+            ],
+            "source": null
+          },
+          "paused": false
+        }
+      ]
+    },
+    {
+      "id": "4542ea8a-8d08-4c14-90da-9758db9c1f21",
+      "name": "Plan 6",
+      "createdAt": "2026-11-18T16:12:07.7096324+02:00",
+      "revision": 3,
+      "items": [
+        {
+          "id": "b388313c-12cf-40dc-a75a-d7b488a3aad3",
+          "input": {
+            "profile": "002|09|3.1|7",
+            "label": "002",
+            "data": 29232,
+            "sdi": 0,
+            "ssm": 0,
+            "hertz": 1,
+            "editor": [
+              {
+                "value": "72.3",
+                "checked": false
+              }
+            ],
+            "source": {
+              "mode": "ramp",
+              "field": "numeric",
+              "minimum": 0,
+              "maximum": 399.9,
+              "start": 0,
+              "increment": 0.1,
+              "samplesPerPeriod": 40,
+              "values": null
+            }
+          },
+          "paused": false
+        }
+      ]
+    }
+  ]
+}

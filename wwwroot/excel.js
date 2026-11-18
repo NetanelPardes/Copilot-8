@@ -1,6 +1,5 @@
-const excelEncoder = new TextEncoder();
-
-const crcTable = Uint32Array.from({ length: 256 }, (_, index) => {
+const workbookEncoder = new TextEncoder();
+const zipCrcTable = Uint32Array.from({ length: 256 }, (_, index) => {
     let crc = index;
     for (let bit = 0; bit < 8; bit++) {
         crc = (crc >>> 1) ^ ((crc & 1) ? 0xedb88320 : 0);
@@ -8,54 +7,23 @@ const crcTable = Uint32Array.from({ length: 256 }, (_, index) => {
     return crc >>> 0;
 });
 
-function excelCrc(bytes) {
+function zipCrc(bytes) {
     let crc = 0xffffffff;
-    for (const byte of bytes) crc = (crc >>> 8) ^ crcTable[(crc ^ byte) & 255];
+    for (const byte of bytes) crc = (crc >>> 8) ^ zipCrcTable[(crc ^ byte) & 255];
     return (crc ^ 0xffffffff) >>> 0;
 }
 
-function excelDateParts(date) {
-    const pad = (value, length = 2) => String(value).padStart(length, '0');
-
-    return {
-        date: [pad(date.getDate()), pad(date.getMonth() + 1), date.getFullYear()].join('-'),
-        time: [pad(date.getHours()), pad(date.getMinutes()), pad(date.getSeconds())].join(':'),
-        milliseconds: pad(date.getMilliseconds(), 3)
-    };
-}
-
-function excelXml(value) {
-    return String(value ?? '')
-        .replace(/[^\u0009\u000a\u000d\u0020-\ud7ff\ue000-\ufffd\u{10000}-\u{10ffff}]/gu, '\ufffd')
-        .replaceAll('&', '&amp;')
-        .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;');
-}
-
-function excelRow(index, values) {
-    const cells = values.map((value, column) => {
-        const ref = String.fromCharCode(65 + column) + index;
-
-        if (Number.isFinite(value)) {
-            return `<c r="${ref}"><v>${value}</v></c>`;
-        }
-
-        return `<c r="${ref}" t="inlineStr"><is><t xml:space="preserve">${excelXml(value)}</t></is></c>`;
-    });
-
-    return `<row r="${index}">${cells.join('')}</row>`;
-}
-
-function excelZip(files) {
-    const parts = [];
+// An XLSX is a ZIP archive with a workbook, worksheet and their relationships.
+function zipWorkbook(files) {
+    const blocks = [];
     const directory = [];
     let offset = 0;
     let directorySize = 0;
 
-    for (const [path, xml] of files) {
-        const name = excelEncoder.encode(path);
-        const bytes = excelEncoder.encode(xml);
-        const crc = excelCrc(bytes);
+    for (const [path, content] of files) {
+        const name = workbookEncoder.encode(path);
+        const data = workbookEncoder.encode(content);
+        const crc = zipCrc(data);
         const local = new DataView(new ArrayBuffer(30));
         const central = new DataView(new ArrayBuffer(46));
 
@@ -63,8 +31,8 @@ function excelZip(files) {
         local.setUint16(4, 20, true);
         local.setUint16(12, 33, true);
         local.setUint32(14, crc, true);
-        local.setUint32(18, bytes.length, true);
-        local.setUint32(22, bytes.length, true);
+        local.setUint32(18, data.length, true);
+        local.setUint32(22, data.length, true);
         local.setUint16(26, name.length, true);
 
         central.setUint32(0, 0x02014b50, true);
@@ -72,15 +40,14 @@ function excelZip(files) {
         central.setUint16(6, 20, true);
         central.setUint16(14, 33, true);
         central.setUint32(16, crc, true);
-        central.setUint32(20, bytes.length, true);
-        central.setUint32(24, bytes.length, true);
+        central.setUint32(20, data.length, true);
+        central.setUint32(24, data.length, true);
         central.setUint16(28, name.length, true);
         central.setUint32(42, offset, true);
 
-        parts.push(local.buffer, name, bytes);
+        blocks.push(local.buffer, name, data);
         directory.push(central.buffer, name);
-
-        offset += local.byteLength + name.length + bytes.length;
+        offset += local.byteLength + name.length + data.length;
         directorySize += central.byteLength + name.length;
     }
 
@@ -91,104 +58,113 @@ function excelZip(files) {
     end.setUint32(12, directorySize, true);
     end.setUint32(16, offset, true);
 
-    return new Blob([...parts, ...directory, end.buffer], {
+    return new Blob([...blocks, ...directory, end.buffer], {
         type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     });
 }
 
-function buildRecordingWorkbook(events, started, ended, partial) {
-    const start = excelDateParts(started);
-    const finish = excelDateParts(ended);
-
-    const directions = {
-        TX: 'שידור (TX)',
-        RX: 'קליטה (RX)',
-        ERROR: 'שגיאה'
+function localParts(date) {
+    const pad = (value, count = 2) => String(value).padStart(count, '0');
+    return {
+        date: [pad(date.getDate()), pad(date.getMonth() + 1), date.getFullYear()].join('-'),
+        time: [pad(date.getHours()), pad(date.getMinutes()), pad(date.getSeconds())].join(':'),
+        milliseconds: pad(date.getMilliseconds(), 3)
     };
+}
 
+function escapeXml(value) {
+    return String(value ?? '')
+        .replace(/[^\u0009\u000a\u000d\u0020-\ud7ff\ue000-\ufffd\u{10000}-\u{10ffff}]/gu, '\ufffd')
+        .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+}
+
+function worksheetRow(index, values, bold = false) {
+    const cells = values.map((value, column) => {
+        const ref = String.fromCharCode(65 + column) + index;
+        const style = bold ? ' s="1"' : '';
+        if (Number.isFinite(value)) return `<c r="${ref}"${style}><v>${value}</v></c>`;
+        return `<c r="${ref}" t="inlineStr"${style}><is><t xml:space="preserve">${escapeXml(value)}</t></is></c>`;
+    });
+    return `<row r="${index}">${cells.join('')}</row>`;
+}
+
+function buildRecordingWorkbook(events, started, ended, partial) {
+    const start = localParts(started);
+    const finish = localParts(ended);
+    const headings = ['מספר אירוע', 'תאריך האירוע (מקומי)', 'שעת האירוע (מקומית)',
+        'כיוון UART', 'Label באוקטלי', 'מזהה שידור מחזורי', 'מספר בתים',
+        'מילה / בתים שנדחו בהקס', 'פרטי שגיאה', 'מזהה חבילת UART',
+        'מספר מילים בחבילה', 'Checksum בהקס', 'חבילת UART מלאה בהקס'];
+    const direction = { TX: 'שידור (TX)', RX: 'קליטה (RX)', ERROR: 'שגיאה' };
     const rows = [
-        excelRow(1, ['תחילת הקלטה', `${start.date} ${start.time}`]),
-        excelRow(2, ['סיום הקלטה', `${finish.date} ${finish.time}`]),
-        excelRow(3, [
-            'שלמות ההקלטה',
-            partial ? 'הקלטה חלקית. ייתכן שחסרים אירועים.' : 'לא זוהתה השמטת אירועים.'
-        ]),
-        excelRow(4, [
-            'מספר אירוע', 'תאריך האירוע (מקומי)', 'שעת האירוע (מקומית)',
-            'כיוון UART', 'Label באוקטלי', 'מזהה שידור מחזורי',
-            'מספר בתים', 'בתים בהקסדצימלי', 'פרטי שגיאה'
-        ])
+        worksheetRow(1, ['תחילת הקלטה', start.date + ' ' + start.time]),
+        worksheetRow(2, ['סיום הקלטה', finish.date + ' ' + finish.time]),
+        worksheetRow(3, ['שלמות ההקלטה', partial ? 'חלקית · אירועים עשויים להיות חסרים' : 'לא זוהתה השמטת אירועים']),
+        worksheetRow(4, headings, true)
     ];
 
     events.forEach((event, index) => {
-        const local = excelDateParts(new Date(event.time));
-        const hex = event.hex?.trim() ?? '';
-
-        rows.push(excelRow(index + 5, [
-            event.sequence,
-            local.date,
-            `${local.time}.${local.milliseconds}`,
-            directions[event.direction] ?? event.direction,
-            event.label ?? '',
-            event.cycleId ?? '',
-            hex ? hex.split(/\s+/).length : 0,
-            hex,
-            event.error ?? ''
+        const local = localParts(new Date(event.time));
+        const hex = event.hex ?? '';
+        rows.push(worksheetRow(index + 5, [
+            event.sequence, local.date, local.time + '.' + local.milliseconds,
+            direction[event.direction] ?? event.direction,
+            event.label ?? '', event.cycleId ?? '', hex ? hex.split(' ').length : 0,
+            hex, event.error ?? '', event.packetId ?? '', event.wordCount ?? '',
+            event.checksum ?? '', event.packetHex ?? ''
         ]));
     });
 
-    const columns = [14, 24, 24, 18, 19, 40, 13, 66, 44].map((width, index) =>
-        `<col min="${index + 1}" max="${index + 1}" width="${width}" customWidth="1"/>`
-    ).join('');
+    const columns = [14, 24, 24, 17, 19, 40, 13, 66, 44, 40, 18, 16, 100].map((width, i) =>
+        `<col min="${i + 1}" max="${i + 1}" width="${width}" customWidth="1"/>`).join('');
 
-    const packageNs = 'http://schemas.openxmlformats.org/package/2006/relationships';
-    const officeNs = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships';
-    const sheetNs = 'http://schemas.openxmlformats.org/spreadsheetml/2006/main';
-
-    return excelZip([
+    return zipWorkbook([
         ['[Content_Types].xml', `<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
-            <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>
-            <Default Extension="xml" ContentType="application/xml"/>
-            <Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>
-            <Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>
+          <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>
+          <Default Extension="xml" ContentType="application/xml"/>
+          <Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>
+          <Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>
+          <Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>
         </Types>`],
-        ['_rels/.rels', `<Relationships xmlns="${packageNs}">
-            <Relationship Id="rId1" Type="${officeNs}/officeDocument" Target="xl/workbook.xml"/>
+        ['_rels/.rels', `<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+          <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>
         </Relationships>`],
-        ['xl/workbook.xml', `<workbook xmlns="${sheetNs}" xmlns:r="${officeNs}">
-            <bookViews><workbookView/></bookViews>
-            <sheets><sheet name="תעבורת UART" sheetId="1" r:id="rId1"/></sheets>
+        ['xl/workbook.xml', `<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+          <bookViews><workbookView/></bookViews><sheets><sheet name="תעבורת UART" sheetId="1" r:id="rId1"/></sheets>
         </workbook>`],
-        ['xl/_rels/workbook.xml.rels', `<Relationships xmlns="${packageNs}">
-            <Relationship Id="rId1" Type="${officeNs}/worksheet" Target="worksheets/sheet1.xml"/>
+        ['xl/_rels/workbook.xml.rels', `<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+          <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/>
+          <Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>
         </Relationships>`],
-        ['xl/worksheets/sheet1.xml', `<worksheet xmlns="${sheetNs}">
-            <sheetViews><sheetView workbookViewId="0" rightToLeft="1">
-                <pane ySplit="4" topLeftCell="A5" activePane="bottomLeft" state="frozen"/>
-            </sheetView></sheetViews>
-            <cols>${columns}</cols>
-            <sheetData>${rows.join('')}</sheetData>
-            <autoFilter ref="A4:I${rows.length}"/>
+        ['xl/styles.xml', `<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+          <fonts count="2"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font></fonts>
+          <fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills>
+          <borders count="1"><border/></borders>
+          <cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>
+          <cellXfs count="2"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="0" fontId="1" fillId="0" borderId="0" xfId="0" applyFont="1"/></cellXfs>
+          <cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles>
+        </styleSheet>`],
+        ['xl/worksheets/sheet1.xml', `<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+          <sheetViews><sheetView workbookViewId="0" rightToLeft="1"><pane ySplit="4" topLeftCell="A5" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>
+          <cols>${columns}</cols><sheetData>${rows.join('')}</sheetData><autoFilter ref="A4:M${rows.length}"/>
         </worksheet>`]
     ]);
 }
 
-function downloadRecordingWorkbook(events, started, ended, partial) {
-    const start = excelDateParts(started);
-    const finish = excelDateParts(ended);
+function recordingFilename(started, ended) {
+    const start = localParts(started);
+    const finish = localParts(ended);
     const endDate = start.date === finish.date ? '' : finish.date + ' ';
-    const startTime = start.time.replaceAll(':', '-');
-    const endTime = finish.time.replaceAll(':', '-');
+    return `${start.date} - ${start.time.replaceAll(':', '-')} - ${endDate}${finish.time.replaceAll(':', '-')}.xlsx`;
+}
 
-    const file = buildRecordingWorkbook(events, started, ended, partial);
-    const url = URL.createObjectURL(file);
+function downloadRecordingWorkbook(events, started, ended, partial) {
+    const url = URL.createObjectURL(buildRecordingWorkbook(events, started, ended, partial));
     const link = document.createElement('a');
-
     link.href = url;
-    link.download = `${start.date} - ${startTime} - ${endDate}${endTime}.xlsx`;
+    link.download = recordingFilename(started, ended);
     document.body.append(link);
     link.click();
     link.remove();
-
     window.setTimeout(() => URL.revokeObjectURL(url), 1000);
 }

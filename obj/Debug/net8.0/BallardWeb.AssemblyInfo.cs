@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BallardWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2326fb1e4c6ec3adf585460f288ca0736a849eb7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25b91a3a02dfe76a1c432f178ec65c785ae63ee6")]
 [assembly: System.Reflection.AssemblyProductAttribute("BallardWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BallardWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

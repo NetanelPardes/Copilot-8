@@ -8,6 +8,7 @@ internal static class BoardApi
     {
         var api = app.MapGroup("/api");
 
+        api.MapGet("/value-fields", (UartBoard board) => Results.Ok(board.ValueFields()));
         api.MapGet("/ports", (UartBoard board) => Run(() => Results.Ok(board.Ports())));
         api.MapGet("/board", (long? after, UartBoard board) =>
             Results.Ok(board.Snapshot(Math.Max(0, after ?? 0))));
@@ -26,22 +27,58 @@ internal static class BoardApi
 
         api.MapPost("/messages", (MessageInput input, UartBoard board) => Run(() =>
         {
-            var id = board.Send(input);
-            return Results.Ok(new { id });
+            board.Send(input);
+            return Results.NoContent();
         }));
-
         api.MapPut("/messages/{id:guid}", (Guid id, MessageInput input, UartBoard board) => Run(() =>
         {
-            board.Edit(id, input);
+            board.EditStandalone(id, input);
             return Results.NoContent();
         }));
-
+        api.MapPut("/messages/{id:guid}/pause", (Guid id, StandalonePause input, UartBoard board) => Run(() =>
+        {
+            board.PauseStandalone(id, input.Paused);
+            return Results.NoContent();
+        }));
         api.MapDelete("/messages/{id:guid}", (Guid id, UartBoard board) => Run(() =>
         {
-            board.Stop(id);
+            board.RemoveStandalone(id);
             return Results.NoContent();
         }));
-
+        api.MapPost("/plans", (UartBoard board) => Run(() => Results.Ok(board.CreatePlan())));
+        api.MapDelete("/plans/{id:guid}", (Guid id, long revision, UartBoard board) => Run(() =>
+        {
+            board.DeletePlan(id, revision);
+            return Results.NoContent();
+        }));
+        api.MapPost("/plans/{id:guid}/activate", (Guid id, RevisionInput input, UartBoard board) => Run(() =>
+        {
+            board.ActivatePlan(id, input.Revision);
+            return Results.NoContent();
+        }));
+        api.MapPost("/plans/{id:guid}/items", (Guid id, PlanChange input, UartBoard board) => Run(() =>
+        {
+            board.SaveItem(id, null, input);
+            return Results.NoContent();
+        }));
+        api.MapPut("/plans/{id:guid}/items/{item:guid}",
+            (Guid id, Guid item, PlanChange input, UartBoard board) => Run(() =>
+        {
+            board.SaveItem(id, item, input);
+            return Results.NoContent();
+        }));
+        api.MapDelete("/plans/{id:guid}/items/{item:guid}",
+            (Guid id, Guid item, long revision, UartBoard board) => Run(() =>
+        {
+            board.RemoveItem(id, item, revision);
+            return Results.NoContent();
+        }));
+        api.MapPut("/plans/{id:guid}/items/{item:guid}/pause",
+            (Guid id, Guid item, PauseChange input, UartBoard board) => Run(() =>
+        {
+            board.SetPaused(id, item, input);
+            return Results.NoContent();
+        }));
 
     }
 
@@ -67,8 +104,3 @@ internal static class BoardApi
         }
     }
 }
-
-internal sealed record ConnectionInput(string? Port, int BaudRate, string? Parity, int StopBits);
-internal sealed record EditorValue(string Value, bool Checked);
-internal sealed record MessageInput(string? Profile, string? Label, int Data, int Sdi, int Ssm,
-    double? Hertz, EditorValue[]? Editor);

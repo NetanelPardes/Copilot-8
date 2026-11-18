@@ -4,31 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Copilot 8</title>
-    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="styles.css?v=19">
     <script src="gama-fields.js?v=6" defer></script>
-    <script src="excel.js" defer></script>
-    <script src="app.js?v=7" defer></script>
+    <script src="excel.js?v=2" defer></script>
+    <script src="data-sources.js?v=1" defer></script>
+    <script src="app.js?v=19" defer></script>
 </head>
 <body>
 <main>
     <header class="top">
+        <nav class="actions" aria-label="פעולות">
+            <button id="new-message" class="primary" disabled>הודעה חדשה</button>
+            <button id="new-plan">תוכנית שליחה חדשה</button>
+            <button id="open-dictionary">מילון לייבלים</button>
+        </nav>
         <h1><bdi>Copilot 8</bdi></h1>
-        <button id="open-connection" type="button" data-connected="false"
-                aria-haspopup="dialog" aria-controls="connection-dialog"
-                aria-label="מנותק. פתח הגדרות חיבור UART">מנותק</button>
+        <div class="connection-place">
+            <button id="open-connection" type="button" data-connected="false"
+                    aria-haspopup="dialog" aria-controls="connection-dialog">מנותק</button>
+            <button id="open-plan-history" type="button" aria-haspopup="dialog"
+                    aria-controls="plan-history-dialog">היסטוריית תוכניות</button>
+        </div>
     </header>
 
-    <nav class="actions" aria-label="פעולות">
-        <button id="new-message" class="primary" disabled>הודעה חדשה</button>
-        <button id="open-dictionary">מילון לייבלים</button>
-    </nav>
     <p id="notice" class="notice" role="status"></p>
 
     <section class="card" aria-labelledby="active-title">
         <h2 id="active-title">שידורים פעילים</h2>
         <div class="table-wrap">
             <table>
-                <thead><tr><th>Label</th><th>Data מקודד</th><th>תדר</th><th>פעולות</th></tr></thead>
+                <thead><tr><th>Label</th><th>תוכנית</th><th>Data מקודד</th><th>תדר</th><th>מצב</th><th class="action-heading">פעולות</th></tr></thead>
                 <tbody id="active"></tbody>
             </table>
         </div>
@@ -36,23 +41,22 @@
 
     <section class="card" aria-labelledby="traffic-title">
         <div class="section-head">
-            <h2 id="traffic-title">תעבורת UART</h2>
+            <h2 id="traffic-title">תעבורת UART — שידור אחרון לכל הודעה</h2>
             <div class="actions">
                 <label class="inline">כיוון
-                    <select id="direction"><option value="">הכול</option><option>TX</option><option>RX</option><option>ERROR</option></select>
+                    <select id="direction"><option value="">הכול</option><option selected>TX</option><option>RX</option><option>ERROR</option></select>
                 </label>
                 <label class="inline">סנן לפי Label
                     <input id="filter-label" type="search" dir="ltr" inputmode="numeric"
                            maxlength="3" placeholder="למשל 203" autocomplete="off">
                 </label>
                 <button id="record">התחל הקלטה</button>
-                <button id="export" disabled>הורד Excel</button>
-                <label class="inline"><input id="follow" type="checkbox" checked> עקוב אחרי תעבורה חדשה</label>
             </div>
         </div>
+        <p class="traffic-hint">ב־TX מוצג השידור האחרון לכל הודעה נפרדת, גם כשמספר ה־Label זהה. ההקלטה כוללת את כל האירועים.</p>
         <div class="table-wrap traffic">
             <table>
-                <thead><tr><th>#</th><th>זמן מקומי</th><th>כיוון</th><th>Label</th><th>בתים בהקס</th></tr></thead>
+                <thead><tr><th>#</th><th>זמן מקומי</th><th>כיוון</th><th>Label</th><th>מילים בחבילה</th><th>מילה / בתים שנדחו בהקס</th></tr></thead>
                 <tbody id="traffic"></tbody>
             </table>
         </div>
@@ -60,13 +64,73 @@
     </section>
 </main>
 
+<dialog id="plan-history-dialog" aria-labelledby="plan-history-title">
+    <div class="history-layout">
+        <h2 id="plan-history-title">היסטוריית תוכניות שליחה</h2>
+        <div class="table-wrap history-table">
+            <table>
+                <thead><tr><th>שם התוכנית</th><th>תאריך יצירה</th><th>שעת יצירה</th><th>מספר הודעות</th><th>מצב</th><th class="action-heading">פעולות</th></tr></thead>
+                <tbody id="plans"></tbody>
+            </table>
+        </div>
+        <p id="history-error" class="notice" role="status"></p>
+        <div class="actions"><button type="button" data-close>סגור</button></div>
+    </div>
+</dialog>
+
+
+<dialog id="plan-dialog" aria-labelledby="plan-title">
+    <div class="plan-layout">
+        <h2 id="plan-title">תוכנית שליחה</h2>
+        <p>ההודעות נשמרות בקובץ. הוספת הודעה אינה משדרת אותה.
+            ״הפעל תוכנית״ מתחיל מחדש את כל ההודעות יחד, כולל הודעות מושהות. מצב ההפעלה נשמר בקובץ.</p>
+        <div class="actions"><button id="add-plan-message">הוסף הודעה</button></div>
+        <div class="table-wrap plan-items">
+            <table>
+                <thead><tr><th>Label</th><th>Data</th><th>תדר</th><th>מצב</th><th class="action-heading">פעולות</th></tr></thead>
+                <tbody id="plan-items"></tbody>
+            </table>
+        </div>
+        <p id="plan-error" class="notice" role="status"></p>
+        <div class="actions">
+            <button id="activate-plan" class="primary">הפעל תוכנית</button>
+            <button type="button" data-close>סגור</button>
+        </div>
+    </div>
+</dialog>
+
 <dialog id="editor-dialog" aria-labelledby="editor-title">
     <form id="editor">
         <h2 id="editor-title">הודעה חדשה</h2>
         <label>Label לפי GAMA 11<select id="label" dir="ltr" required></select></label>
         <p id="description"></p>
         <div hidden><label>Data<input id="data"></label><label>סליידר<input id="slider" type="range"></label></div>
-        <div id="gama-fields"></div>
+        <div class="editor-scroll">
+            <div id="gama-fields"></div>
+            <section class="source-panel">
+                <h3>מקור הנתונים</h3>
+                <label>סוג שינוי
+                    <select id="source-mode">
+                        <option value="fixed">ערך קבוע — לפי השדות למעלה</option>
+                        <option value="ramp">עלייה / ירידה עם חזרה לקצה הטווח</option>
+                        <option value="triangle">עלייה וירידה בין הגבולות</option>
+                        <option value="sine">גל סינוס</option>
+                        <option value="random">אקראי בטווח</option>
+                        <option value="sequence">רשימת ערכים מחזורית</option>
+                    </select>
+                </label>
+                <p id="source-hint"></p>
+                <label id="source-field-wrap" hidden>השדה המשתנה<select id="source-field"></select></label>
+                <div id="source-options" class="grid" hidden>
+                    <label>מינימום<input id="source-min" type="number" step="any" required disabled></label>
+                    <label>מקסימום<input id="source-max" type="number" step="any" required disabled></label>
+                    <label>ערך התחלה<input id="source-start" type="number" step="any" required disabled></label>
+                    <label>שינוי בכל שידור (שלילי = ירידה)<input id="source-step" type="number" step="any" required disabled></label>
+                    <label>מספר שידורים למחזור סינוס<input id="source-samples" type="number" min="4" max="1000000" step="1" value="40" required disabled></label>
+                    <label class="source-list">רשימת ערכים<textarea id="source-values" dir="ltr" rows="3" placeholder="100, 120, 105" required disabled></textarea></label>
+                </div>
+            </section>
+        </div>
         <div class="grid">
             <label>SDI<select id="sdi"><option value="0">00</option><option value="1">01</option><option value="2">10</option><option value="3">11</option></select></label>
             <label>SSM<select id="ssm"><option value="0">00</option><option value="1">01</option><option value="2">10</option><option value="3">11</option></select></label>
