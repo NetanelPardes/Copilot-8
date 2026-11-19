@@ -1,4 +1,5 @@
 using System.Text.Json;
+using BallardWeb.Api;
 using System.Text.RegularExpressions;
 
 namespace BallardWeb.Serial;
@@ -15,11 +16,50 @@ internal sealed record NumericField(string Id, string Title, decimal Minimum, de
             throw new ArgumentException($"{Title}: הערך חייב להיות בטווח {Minimum} עד {Maximum}, בצעדים של {Step}.");
         return checked((long)tick);
     }
+    public decimal Decode(int data, int sdi)
+    {
+        uint combined = ((uint)data << 2) | (uint)sdi;
+        uint raw = (combined >> (First - 9)) & ((1u << Width) - 1);
+        decimal value;
+        if (Encoding == "adf")
+            value = ReadBcd(raw >> 1) + ((raw & 1) == 0 ? 0m : .5m);
+        else if (Encoding == "bcd")
+        {
+            if ((raw & ((1u << Shift) - 1)) != 0)
+                throw new ArgumentException("ביטי ריפוד BCD אינם אפס.");
+            value = ReadBcd(raw >> Shift) * Step;
+        }
+        else
+        {
+            long ticks = raw;
+            if (Minimum < 0 && (raw & (1u << (Width - 1))) != 0)
+                ticks -= 1L << Width;
+            value = ticks * Step;
+        }
+        Tick(value);
+        return value;
+    }
+
+    private static long ReadBcd(uint raw)
+    {
+        long result = 0, multiplier = 1;
+        while (raw != 0)
+        {
+            uint digit = raw & 15;
+            if (digit > 9) throw new ArgumentException("ספרת BCD אינה תקינה.");
+            result += digit * multiplier;
+            multiplier *= 10;
+            raw >>= 4;
+        }
+        return result;
+    }
+
 }
 
 internal sealed class NumericCatalogue
 {
     public Dictionary<string, NumericField[]> Fields { get; } = [];
+    private readonly Dictionary<string, string> codes = [];
 
     public NumericCatalogue(string root)
     {
@@ -31,6 +71,7 @@ internal sealed class NumericCatalogue
             string section = label.GetProperty("section").GetString()!;
             string page = label.GetProperty("page").ToString();
             string key = string.Join("|", code, string.Join(",", equipment), section, page);
+            codes.TryAdd(key, code[..3]);
             var fields = new List<NumericField>();
             if (label.TryGetProperty("numericBnr", out var bnr))
             {
@@ -84,6 +125,15 @@ internal sealed class NumericCatalogue
             || fields.FirstOrDefault(f => f.Id == fieldId) is not { } field)
             throw new ArgumentException("אין הגדרת שדה מספרי מאומתת למקור הנתונים שבחרת.");
         return field;
+    }
+
+    public void Validate(MessageInput input)
+    {
+        if (string.IsNullOrEmpty(input.Profile)) return; // Existing raw diagnostic API input.
+        if (!codes.TryGetValue(input.Profile, out var code) || code != input.Label)
+            throw new ArgumentException("פרופיל הציוד אינו תואם ל־Label.");
+        if (!Fields.TryGetValue(input.Profile, out var fields)) return;
+        foreach (var field in fields) field.Decode(input.Data, input.Sdi);
     }
 
     private static bool StandardEnvelope(JsonElement raw)

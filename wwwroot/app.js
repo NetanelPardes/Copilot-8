@@ -56,7 +56,7 @@ function labelKey(label) {
 
 function labelTitle(label) {
     const equipment = label.equipment?.length ? ' · ציוד ' + label.equipment.join(', ') : '';
-    return label.code + ' - ' + label.name + equipment;
+    return label.code + ' - ' + label.name + equipment + (label.arinc ? ' (Hex) · ARINC' : '');
 }
 
 async function loadLabels() {
@@ -64,7 +64,9 @@ async function loadLabels() {
     if (!response.ok) throw new Error('טעינת מילון GAMA 11 נכשלה.');
     labels = await response.json();
     sourceFields = await api('value-fields');
-    for (const label of labels) $('label').add(new Option(labelTitle(label), labelKey(label)));
+    for (const label of labels) {
+        $('label').add(new Option(labelTitle(label), labelKey(label)));
+    }
     renderDictionary();
     plansSignature = "";
     renderPrograms(plans, activeJobs);
@@ -82,8 +84,14 @@ function renderDictionary() {
         title.textContent = labelTitle(label);
         row.append(title);
 
-        if (label.note) {
-            row.append(' · ', label.note);
+        if (label.note) row.append(' · ', label.note);
+        if (label.arinc) {
+            const spec = label.numericBnr;
+            const info = document.createElement('p');
+            info.textContent = `BNR · ${label.unit} · טווח ${spec.minTick * spec.step} עד ${spec.maxTick * spec.step}`
+                + ` · צעד ${spec.step} · מרווח שידור ${label.arinc.minTransmitMs}–${label.arinc.maxTransmitMs} ms`
+                + ` · ARINC עמוד מודפס ${label.arinc.printedPage}, PDF ${label.arinc.pdfPage}`;
+            row.append(info);
         }
         return row;
     });
@@ -95,6 +103,7 @@ function setMode() {
     $('frequency-field').hidden = !cyclic;
     $('hz').disabled = !cyclic;
     updateSourceVisibility();
+    refreshArincInfo();
 }
 
 function fieldInputs() {
@@ -106,6 +115,8 @@ function selectLabel() {
     $('description').textContent = label?.description ?? '';
     readData = renderGamaFields(label);
     resetSourceFields(label);
+    updateStatusOptions(label);
+    refreshArincInfo();
 }
 
 function editorValues() {
@@ -141,6 +152,7 @@ function openEditor(cycle = null, planId = null) {
     setMode();
     selectLabel();
     if (input?.editor) restoreEditor(input.editor);
+    if (input) $('ssm').value = input.ssm;
     resetSourceFields(labels.find(item => labelKey(item) === $('label').value), input?.source);
     $('editor-dialog').showModal();
 }
@@ -320,11 +332,13 @@ function trafficKey(event) {
 
 function showEvent(event) {
     selectedTrafficKey = trafficKey(event);
+    const decoded = decodeTraffic(event);
     const fields = [event.time, event.direction, event.label, event.cycleId, event.hex, event.error,
         event.packetId ? 'מזהה חבילה: ' + event.packetId : null,
         event.wordCount != null ? 'מילים בחבילה: ' + event.wordCount : null,
         event.checksum ? 'Checksum: ' + event.checksum : null,
-        event.packetHex ? 'חבילת UART מלאה: ' + event.packetHex : null];
+        event.packetHex ? 'חבילת UART מלאה: ' + event.packetHex : null,
+        decoded ? 'פענוח: ' + decoded.summary : null];
     $('selected-event').textContent = fields.filter(Boolean).join(' · ');
 }
 
@@ -342,6 +356,11 @@ function addTrafficRow(event) {
     cell(row, event.direction);
     cell(row, event.label ?? '—');
     cell(row, event.wordCount ?? '—');
+    const decoded = decodeTraffic(event);
+    cell(row, decoded ? (decoded.parityOk ? 'תקין' : 'שגוי') : '—');
+    cell(row, decoded?.summary ?? event.error ?? '—', 'decoded-value');
+    if (decoded && !decoded.parityOk) row.dataset.parity = 'bad';
+    if (decoded?.usable === false) row.dataset.quality = 'warning';
     cell(row, event.hex || event.error || '—', event.hex ? 'hex' : null);
     row.addEventListener('click', () => showEvent(event));
     row.addEventListener('keydown', eventKey => {
@@ -368,7 +387,7 @@ function renderTraffic() {
         visible.forEach(addTrafficRow);
         showEvent(visible.find(event => trafficKey(event) === selectedTrafficKey) ?? visible.at(-1));
     } else {
-        cell($('traffic').insertRow(), 'אין אירוע שתואם לסינון.').colSpan = 6;
+        cell($('traffic').insertRow(), 'אין אירוע שתואם לסינון.').colSpan = 8;
         $('selected-event').textContent = '';
     }
 }
@@ -424,7 +443,10 @@ function appendEvents(events) {
         const eventTime = new Date(event.time);
         if (recordingOn && eventTime >= recordingStartedAt
             && (!recordingEndedAt || eventTime <= recordingEndedAt)) {
-            recording.push(event);
+            const decoded = decodeTraffic(event);
+            recording.push({ ...event, decodedSummary: decoded?.summary ?? '',
+                parityStatus: decoded ? (decoded.parityOk ? 'תקין' : 'שגוי') : '',
+                decodedProfile: decoded?.profile ?? '', decodedStatus: decoded?.status ?? '' });
             if (recording.length >= maxRecordingRows) {
                 recordingEndedAt ??= new Date();
                 hasGap = true;
@@ -483,6 +505,12 @@ $('mode').addEventListener('change', setMode);
 $('source-mode').addEventListener('change', updateSourceVisibility);
 $('source-field').addEventListener('change', sourceFieldDefaults);
 $('direction').addEventListener('change', renderTraffic);
+$('hz').addEventListener('input', refreshArincInfo);
+$('apply-timing').addEventListener('click', () => {
+    const label = labels.find(item => labelKey(item) === $('label').value);
+    if (label?.arinc) $('hz').value = (1000 / label.arinc.maxTransmitMs).toFixed(6);
+    refreshArincInfo();
+});
 $('filter-label').addEventListener('input', renderTraffic);
 $('search').addEventListener('input', renderDictionary);
 $('new-message').addEventListener('click', () => openEditor());

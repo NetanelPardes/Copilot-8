@@ -3263,14 +3263,33 @@
       }
     ],
     "numericBnr": {
-      "title": "גובה לחץ ברגל",
+      "title": "Altitude (1013.25 mb) · ft",
       "first": 12,
-      "step": 1,
+      "step": 1.0,
       "minTick": -131072,
       "maxTick": 131071
     },
     "arincPage": 60,
-    "note": ""
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים.",
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 60,
+      "pdfPage": 68,
+      "equipmentHex": "006",
+      "significantBits": 17,
+      "scale": 131072,
+      "publishedResolution": 1,
+      "minTransmitMs": 31.3,
+      "maxTransmitMs": 62.5,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    }
   },
   {
     "code": "203",
@@ -3318,14 +3337,33 @@
       }
     ],
     "numericBnr": {
-      "title": "גובה לחץ ברגל",
+      "title": "Altitude (1013.25 mb) · ft",
       "first": 12,
-      "step": 1,
+      "step": 1.0,
       "minTick": -131072,
       "maxTick": 131071
     },
     "arincPage": 60,
-    "note": ""
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים.",
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 60,
+      "pdfPage": 68,
+      "equipmentHex": "038",
+      "significantBits": 17,
+      "scale": 131072,
+      "publishedResolution": 1,
+      "minTransmitMs": 31.3,
+      "maxTransmitMs": 62.5,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    }
   },
   {
     "code": "203",
@@ -6045,5 +6083,1487 @@
       }
     ],
     "note": "קוד חברה 1–31 מתועד. השימוש בביטים 25–29 נקבע במפרט היצרן."
+  },
+  {
+    "code": "203",
+    "equipment": [
+      "018"
+    ],
+    "name": "Altitude (1013.25 mb) (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Altitude (1013.25 mb) · ft",
+      "first": 12,
+      "step": 1.0,
+      "minTick": -131072,
+      "maxTick": 131071
+    },
+    "arincPage": 60,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 60,
+      "pdfPage": 68,
+      "equipmentHex": "018",
+      "significantBits": 17,
+      "scale": 131072,
+      "publishedResolution": 1,
+      "minTransmitMs": 20,
+      "maxTransmitMs": 40,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "203",
+    "equipment": [
+      "035"
+    ],
+    "name": "Altitude (1013.25 mb) (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Altitude (1013.25 mb) · ft",
+      "first": 12,
+      "step": 1.0,
+      "minTick": -131072,
+      "maxTick": 131071
+    },
+    "arincPage": 60,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 60,
+      "pdfPage": 68,
+      "equipmentHex": "035",
+      "significantBits": 17,
+      "scale": 131072,
+      "publishedResolution": 1,
+      "minTransmitMs": 20,
+      "maxTransmitMs": 500,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "203",
+    "equipment": [
+      "140"
+    ],
+    "name": "Altitude (1013.25 mb) (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Altitude (1013.25 mb) · ft",
+      "first": 12,
+      "step": 1.0,
+      "minTick": -131072,
+      "maxTick": 131071
+    },
+    "arincPage": 60,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 60,
+      "pdfPage": 68,
+      "equipmentHex": "140",
+      "significantBits": 17,
+      "scale": 131072,
+      "publishedResolution": 1,
+      "minTransmitMs": 31.25,
+      "maxTransmitMs": 62.5,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "204",
+    "equipment": [
+      "006"
+    ],
+    "name": "Baro Corrected Altitude #1 (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Baro Corrected Altitude #1 · ft",
+      "first": 12,
+      "step": 1.0,
+      "minTick": -131072,
+      "maxTick": 131071
+    },
+    "arincPage": 60,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 60,
+      "pdfPage": 68,
+      "equipmentHex": "006",
+      "significantBits": 17,
+      "scale": 131072,
+      "publishedResolution": 1,
+      "minTransmitMs": 31.3,
+      "maxTransmitMs": 62.5,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "204",
+    "equipment": [
+      "038"
+    ],
+    "name": "Baro Corrected Altitude #1 (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Baro Corrected Altitude #1 · ft",
+      "first": 12,
+      "step": 1.0,
+      "minTick": -131072,
+      "maxTick": 131071
+    },
+    "arincPage": 60,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 60,
+      "pdfPage": 68,
+      "equipmentHex": "038",
+      "significantBits": 17,
+      "scale": 131072,
+      "publishedResolution": 1,
+      "minTransmitMs": 31.3,
+      "maxTransmitMs": 62.5,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "204",
+    "equipment": [
+      "140"
+    ],
+    "name": "Baro Corrected Altitude #1 (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Baro Corrected Altitude #1 · ft",
+      "first": 12,
+      "step": 1.0,
+      "minTick": -131072,
+      "maxTick": 131071
+    },
+    "arincPage": 60,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 60,
+      "pdfPage": 68,
+      "equipmentHex": "140",
+      "significantBits": 17,
+      "scale": 131072,
+      "publishedResolution": 1,
+      "minTransmitMs": 31.25,
+      "maxTransmitMs": 62.5,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "205",
+    "equipment": [
+      "006"
+    ],
+    "name": "Mach (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Mach · Mach",
+      "first": 13,
+      "step": 6.25e-05,
+      "minTick": 0,
+      "maxTick": 65535
+    },
+    "arincPage": 60,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "Mach",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 60,
+      "pdfPage": 68,
+      "equipmentHex": "006",
+      "significantBits": 16,
+      "scale": 4.096,
+      "publishedResolution": 6.25e-05,
+      "minTransmitMs": 62.5,
+      "maxTransmitMs": 125,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "non-negative parameter"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "205",
+    "equipment": [
+      "01A"
+    ],
+    "name": "Mach (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Mach · Mach",
+      "first": 13,
+      "step": 6.25e-05,
+      "minTick": 0,
+      "maxTick": 65535
+    },
+    "arincPage": 60,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "Mach",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 60,
+      "pdfPage": 68,
+      "equipmentHex": "01A",
+      "significantBits": 16,
+      "scale": 4.096,
+      "publishedResolution": 6.25e-05,
+      "minTransmitMs": 62.5,
+      "maxTransmitMs": 125,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "non-negative parameter"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "205",
+    "equipment": [
+      "038"
+    ],
+    "name": "Mach (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Mach · Mach",
+      "first": 13,
+      "step": 6.25e-05,
+      "minTick": 0,
+      "maxTick": 65535
+    },
+    "arincPage": 60,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "Mach",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 60,
+      "pdfPage": 68,
+      "equipmentHex": "038",
+      "significantBits": 16,
+      "scale": 4.096,
+      "publishedResolution": 6.25e-05,
+      "minTransmitMs": 62.5,
+      "maxTransmitMs": 125,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "non-negative parameter"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "206",
+    "equipment": [
+      "006"
+    ],
+    "name": "Computed Airspeed (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Computed Airspeed · kt",
+      "first": 15,
+      "step": 0.0625,
+      "minTick": 0,
+      "maxTick": 16383
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "kt",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "006",
+      "significantBits": 14,
+      "scale": 1024,
+      "publishedResolution": 0.0625,
+      "minTransmitMs": 62.5,
+      "maxTransmitMs": 125,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "non-negative parameter"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "206",
+    "equipment": [
+      "038"
+    ],
+    "name": "Computed Airspeed (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Computed Airspeed · kt",
+      "first": 15,
+      "step": 0.0625,
+      "minTick": 0,
+      "maxTick": 16383
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "kt",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "038",
+      "significantBits": 14,
+      "scale": 1024,
+      "publishedResolution": 0.0625,
+      "minTransmitMs": 62.5,
+      "maxTransmitMs": 125,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "non-negative parameter"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "206",
+    "equipment": [
+      "140"
+    ],
+    "name": "Computed Airspeed (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Computed Airspeed · kt",
+      "first": 15,
+      "step": 0.0625,
+      "minTick": 0,
+      "maxTick": 16383
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "kt",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "140",
+      "significantBits": 14,
+      "scale": 1024,
+      "publishedResolution": 0.0625,
+      "minTransmitMs": 62.5,
+      "maxTransmitMs": 125,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "non-negative parameter"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "207",
+    "equipment": [
+      "006"
+    ],
+    "name": "Maximum Allowable Airspeed (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Maximum Allowable Airspeed · kt",
+      "first": 17,
+      "step": 0.25,
+      "minTick": 0,
+      "maxTick": 4095
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "kt",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "006",
+      "significantBits": 12,
+      "scale": 1024,
+      "publishedResolution": 0.25,
+      "minTransmitMs": 62.5,
+      "maxTransmitMs": 125,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "non-negative parameter"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "207",
+    "equipment": [
+      "00A"
+    ],
+    "name": "Maximum Allowable Airspeed (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Maximum Allowable Airspeed · kt",
+      "first": 18,
+      "step": 0.25,
+      "minTick": 0,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "kt",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "00A",
+      "significantBits": 11,
+      "scale": 512,
+      "publishedResolution": 0.25,
+      "minTransmitMs": 100,
+      "maxTransmitMs": 200,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "non-negative parameter"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "207",
+    "equipment": [
+      "038"
+    ],
+    "name": "Maximum Allowable Airspeed (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Maximum Allowable Airspeed · kt",
+      "first": 17,
+      "step": 0.25,
+      "minTick": 0,
+      "maxTick": 4095
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "kt",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "038",
+      "significantBits": 12,
+      "scale": 1024,
+      "publishedResolution": 0.25,
+      "minTransmitMs": 62.5,
+      "maxTransmitMs": 125,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "non-negative parameter"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "207",
+    "equipment": [
+      "140"
+    ],
+    "name": "Maximum Allowable Airspeed (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Maximum Allowable Airspeed · kt",
+      "first": 17,
+      "step": 0.25,
+      "minTick": 0,
+      "maxTick": 4095
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "kt",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "140",
+      "significantBits": 12,
+      "scale": 1024,
+      "publishedResolution": 0.25,
+      "minTransmitMs": 62.56,
+      "maxTransmitMs": 125,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "non-negative parameter"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "210",
+    "equipment": [
+      "006"
+    ],
+    "name": "True Airspeed (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "True Airspeed · kt",
+      "first": 14,
+      "step": 0.0625,
+      "minTick": 0,
+      "maxTick": 32767
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "kt",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "006",
+      "significantBits": 15,
+      "scale": 2048,
+      "publishedResolution": 0.0625,
+      "minTransmitMs": 62.5,
+      "maxTransmitMs": 125,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "non-negative parameter"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "210",
+    "equipment": [
+      "038"
+    ],
+    "name": "True Airspeed (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "True Airspeed · kt",
+      "first": 14,
+      "step": 0.0625,
+      "minTick": 0,
+      "maxTick": 32767
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "kt",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "038",
+      "significantBits": 15,
+      "scale": 2048,
+      "publishedResolution": 0.0625,
+      "minTransmitMs": 62.5,
+      "maxTransmitMs": 125,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "non-negative parameter"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "210",
+    "equipment": [
+      "140"
+    ],
+    "name": "True Airspeed (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "True Airspeed · kt",
+      "first": 14,
+      "step": 0.0625,
+      "minTick": 0,
+      "maxTick": 32767
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "kt",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "140",
+      "significantBits": 15,
+      "scale": 2048,
+      "publishedResolution": 0.0625,
+      "minTransmitMs": 62.5,
+      "maxTransmitMs": 125,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "non-negative parameter"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "211",
+    "equipment": [
+      "002"
+    ],
+    "name": "Total Air Temperature (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Total Air Temperature · °C",
+      "first": 18,
+      "step": 0.25,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "°C",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "002",
+      "significantBits": 11,
+      "scale": 512,
+      "publishedResolution": 0.25,
+      "minTransmitMs": 250,
+      "maxTransmitMs": 500,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "211",
+    "equipment": [
+      "003"
+    ],
+    "name": "Total Air Temperature (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Total Air Temperature · °C",
+      "first": 18,
+      "step": 0.25,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "°C",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "003",
+      "significantBits": 11,
+      "scale": 512,
+      "publishedResolution": 0.25,
+      "minTransmitMs": 250,
+      "maxTransmitMs": 500,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "211",
+    "equipment": [
+      "006"
+    ],
+    "name": "Total Air Temperature (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Total Air Temperature · °C",
+      "first": 18,
+      "step": 0.25,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "°C",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "006",
+      "significantBits": 11,
+      "scale": 512,
+      "publishedResolution": 0.25,
+      "minTransmitMs": 250,
+      "maxTransmitMs": 500,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "211",
+    "equipment": [
+      "01A"
+    ],
+    "name": "Total Air Temperature (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Total Air Temperature · °C",
+      "first": 18,
+      "step": 0.25,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "°C",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "01A",
+      "significantBits": 11,
+      "scale": 512,
+      "publishedResolution": 0.25,
+      "minTransmitMs": 250,
+      "maxTransmitMs": 500,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "211",
+    "equipment": [
+      "038"
+    ],
+    "name": "Total Air Temperature (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Total Air Temperature · °C",
+      "first": 18,
+      "step": 0.25,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "°C",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "038",
+      "significantBits": 11,
+      "scale": 512,
+      "publishedResolution": 0.25,
+      "minTransmitMs": 250,
+      "maxTransmitMs": 500,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "211",
+    "equipment": [
+      "0AD"
+    ],
+    "name": "Total Air Temperature (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Total Air Temperature · °C",
+      "first": 17,
+      "step": 0.125,
+      "minTick": -4096,
+      "maxTick": 4095
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "°C",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "0AD",
+      "significantBits": 12,
+      "scale": 512,
+      "publishedResolution": 0.125,
+      "minTransmitMs": 250,
+      "maxTransmitMs": 500,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "211",
+    "equipment": [
+      "140"
+    ],
+    "name": "Total Air Temperature (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Total Air Temperature · °C",
+      "first": 17,
+      "step": 0.125,
+      "minTick": -4096,
+      "maxTick": 4095
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "°C",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "140",
+      "significantBits": 12,
+      "scale": 512,
+      "publishedResolution": 0.125,
+      "minTransmitMs": 250,
+      "maxTransmitMs": 500,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "212",
+    "equipment": [
+      "004"
+    ],
+    "name": "Altitude Rate (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Altitude Rate · ft/min",
+      "first": 18,
+      "step": 16.0,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft/min",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "004",
+      "significantBits": 11,
+      "scale": 32768,
+      "publishedResolution": 16,
+      "minTransmitMs": 31.3,
+      "maxTransmitMs": 62.5,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "212",
+    "equipment": [
+      "005"
+    ],
+    "name": "Altitude Rate (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Altitude Rate · ft/min",
+      "first": 18,
+      "step": 16.0,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft/min",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "005",
+      "significantBits": 11,
+      "scale": 32768,
+      "publishedResolution": 16,
+      "minTransmitMs": 31.3,
+      "maxTransmitMs": 62.5,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "212",
+    "equipment": [
+      "006"
+    ],
+    "name": "Altitude Rate (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Altitude Rate · ft/min",
+      "first": 18,
+      "step": 16.0,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft/min",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "006",
+      "significantBits": 11,
+      "scale": 32768,
+      "publishedResolution": 16,
+      "minTransmitMs": 31.3,
+      "maxTransmitMs": 62.5,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "212",
+    "equipment": [
+      "038"
+    ],
+    "name": "Altitude Rate (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Altitude Rate · ft/min",
+      "first": 18,
+      "step": 16.0,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft/min",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "038",
+      "significantBits": 11,
+      "scale": 32768,
+      "publishedResolution": 16,
+      "minTransmitMs": 31.3,
+      "maxTransmitMs": 62.5,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "212",
+    "equipment": [
+      "03B"
+    ],
+    "name": "Altitude Rate (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Altitude Rate · ft/min",
+      "first": 18,
+      "step": 16.0,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft/min",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "03B",
+      "significantBits": 11,
+      "scale": 32768,
+      "publishedResolution": 16,
+      "minTransmitMs": 150,
+      "maxTransmitMs": 250,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "212",
+    "equipment": [
+      "140"
+    ],
+    "name": "Altitude Rate (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Altitude Rate · ft/min",
+      "first": 18,
+      "step": 16.0,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft/min",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "140",
+      "significantBits": 11,
+      "scale": 32768,
+      "publishedResolution": 16,
+      "minTransmitMs": 31.25,
+      "maxTransmitMs": 62.5,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "213",
+    "equipment": [
+      "002"
+    ],
+    "name": "Static Air Temperature (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Static Air Temperature · °C",
+      "first": 18,
+      "step": 0.25,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "°C",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "002",
+      "significantBits": 11,
+      "scale": 512,
+      "publishedResolution": 0.25,
+      "minTransmitMs": 250,
+      "maxTransmitMs": 500,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "213",
+    "equipment": [
+      "006"
+    ],
+    "name": "Static Air Temperature (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Static Air Temperature · °C",
+      "first": 18,
+      "step": 0.25,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "°C",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "006",
+      "significantBits": 11,
+      "scale": 512,
+      "publishedResolution": 0.25,
+      "minTransmitMs": 250,
+      "maxTransmitMs": 500,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "213",
+    "equipment": [
+      "038"
+    ],
+    "name": "Static Air Temperature (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Static Air Temperature · °C",
+      "first": 18,
+      "step": 0.25,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "°C",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "038",
+      "significantBits": 11,
+      "scale": 512,
+      "publishedResolution": 0.25,
+      "minTransmitMs": 250,
+      "maxTransmitMs": 500,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "213",
+    "equipment": [
+      "140"
+    ],
+    "name": "Static Air Temperature (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Static Air Temperature · °C",
+      "first": 18,
+      "step": 0.25,
+      "minTick": -2048,
+      "maxTick": 2047
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "°C",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "140",
+      "significantBits": 11,
+      "scale": 512,
+      "publishedResolution": 0.25,
+      "minTransmitMs": 250,
+      "maxTransmitMs": 500,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "220",
+    "equipment": [
+      "006"
+    ],
+    "name": "Baro Corrected Altitude #2 (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Baro Corrected Altitude #2 · ft",
+      "first": 12,
+      "step": 1.0,
+      "minTick": -131072,
+      "maxTick": 131071
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "006",
+      "significantBits": 17,
+      "scale": 131072,
+      "publishedResolution": 1,
+      "minTransmitMs": 31.3,
+      "maxTransmitMs": 62.5,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "220",
+    "equipment": [
+      "038"
+    ],
+    "name": "Baro Corrected Altitude #2 (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Baro Corrected Altitude #2 · ft",
+      "first": 12,
+      "step": 1.0,
+      "minTick": -131072,
+      "maxTick": 131071
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "038",
+      "significantBits": 17,
+      "scale": 131072,
+      "publishedResolution": 1,
+      "minTransmitMs": 31.3,
+      "maxTransmitMs": 62.5,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
+  },
+  {
+    "code": "220",
+    "equipment": [
+      "140"
+    ],
+    "name": "Baro Corrected Altitude #2 (BNR)",
+    "section": "ARINC 429",
+    "page": null,
+    "fields": [],
+    "numericBnr": {
+      "title": "Baro Corrected Altitude #2 · ft",
+      "first": 12,
+      "step": 1.0,
+      "minTick": -131072,
+      "maxTick": 131071
+    },
+    "arincPage": 61,
+    "coding": "BNR",
+    "equipmentBase": 16,
+    "unit": "ft",
+    "arinc": {
+      "document": "ARINC 429 Part 1-17 (2004), supplied PDF",
+      "attachment": 2,
+      "table": 2,
+      "printedPage": 61,
+      "pdfPage": 69,
+      "equipmentHex": "140",
+      "significantBits": 17,
+      "scale": 131072,
+      "publishedResolution": 1,
+      "minTransmitMs": 31.25,
+      "maxTransmitMs": 62.5,
+      "encodingReference": "Section 2.1.6; Attachment 6 Table 6-27 (printed page 92, PDF 100)",
+      "verification": "reviewed table and general BNR encoding",
+      "minimumKind": "signed encoding range"
+    },
+    "note": "פרופיל ARINC נפרד לפי מזהה ציוד בהקס. מרווחי השידור הם המלצה מוצגת ואינם חוסמים ניסויים."
   }
 ]

@@ -327,7 +327,9 @@ internal sealed class UartBoard : BackgroundService
             {
                 var word = packet.AsSpan(4 + index * 4, 4);
                 string label = Convert.ToString(word[0], 8).PadLeft(3, '0');
-                Record("RX", label, null, word, null, packetId, packetHex, count, packet[^3]);
+                bool parityOk = ArincWord.HasOddParity(word);
+                Record("RX", label, null, word, parityOk ? null : "Parity ARINC אינו אי־זוגי.",
+                    packetId, packetHex, count, packet[^3]);
             }
         }
     }
@@ -388,6 +390,7 @@ internal sealed class UartBoard : BackgroundService
             || input.Editor?.Any(value => value is null || value.Value is null || value.Value.Length > 128) == true)
             throw new ArgumentException("נתוני העורך חורגים מהגודל הנתמך.");
 
+        catalogue.Validate(input);
         if (input.Source is not null) _ = new DynamicValueStream(input, catalogue);
         return ArincWord.Encode(label, input.Data, input.Sdi, input.Ssm);
     }

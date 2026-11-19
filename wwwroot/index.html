@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Copilot 8</title>
-    <link rel="stylesheet" href="styles.css?v=19">
-    <script src="gama-fields.js?v=6" defer></script>
-    <script src="excel.js?v=2" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20">
+    <script src="gama-fields.js?v=7" defer></script>
+    <script src="excel.js?v=3" defer></script>
     <script src="data-sources.js?v=1" defer></script>
-    <script src="app.js?v=19" defer></script>
+    <script src="arinc-details.js?v=1" defer></script>
+    <script src="app.js?v=20" defer></script>
 </head>
 <body>
 <main>
@@ -56,7 +57,7 @@
         <p class="traffic-hint">ב־TX מוצג השידור האחרון לכל הודעה נפרדת, גם כשמספר ה־Label זהה. ההקלטה כוללת את כל האירועים.</p>
         <div class="table-wrap traffic">
             <table>
-                <thead><tr><th>#</th><th>זמן מקומי</th><th>כיוון</th><th>Label</th><th>מילים בחבילה</th><th>מילה / בתים שנדחו בהקס</th></tr></thead>
+                <thead><tr><th>#</th><th>זמן מקומי</th><th>כיוון</th><th>Label</th><th>מילים בחבילה</th><th>Parity</th><th>ערך מפוענח / מצב</th><th>מילה / בתים שנדחו בהקס</th></tr></thead>
                 <tbody id="traffic"></tbody>
             </table>
         </div>
@@ -102,8 +103,9 @@
 <dialog id="editor-dialog" aria-labelledby="editor-title">
     <form id="editor">
         <h2 id="editor-title">הודעה חדשה</h2>
-        <label>Label לפי GAMA 11<select id="label" dir="ltr" required></select></label>
+        <label>Label ופרופיל ציוד — GAMA / ARINC 429<select id="label" dir="ltr" required></select></label>
         <p id="description"></p>
+        <p id="profile-info" class="profile-info"></p>
         <div hidden><label>Data<input id="data"></label><label>סליידר<input id="slider" type="range"></label></div>
         <div class="editor-scroll">
             <div id="gama-fields"></div>
@@ -137,6 +139,7 @@
             <label>סוג שידור<select id="mode"><option value="once">בודד</option><option value="cycle">מחזורי</option></select></label>
             <label id="frequency-field" hidden>תדר בהרץ<input id="hz" type="number" min="0.1" max="100" step="any" value="1" required disabled></label>
         </div>
+        <div class="timing-panel"><p id="timing-info"></p><button id="apply-timing" type="button" hidden>השתמש בתדר מהמסמך</button></div>
         <p id="editor-error" class="notice" role="status"></p>
         <div class="actions"><button id="submit-message" class="primary" type="submit">שלח</button><button type="button" data-close>סגור</button></div>
     </form>

@@ -116,3 +116,10 @@ th.action-heading, td.action-cell { text-align: left; }
 .source-list { grid-column: 1 / -1; }
 
 .source-list textarea { width: 100%; resize: vertical; }
+
+.profile-info, .timing-panel { font-size: .85rem; line-height: 1.4; margin: .25rem 0; }
+.profile-info { max-height: 4.5rem; overflow: auto; color: #53657c; }
+.decoded-value { min-width: 13rem; max-width: 36rem; overflow-wrap: anywhere; }
+tr[data-parity="bad"] { background: #fff0f0 !important; }
+
+tr[data-quality="warning"] { background: #fff7df; }

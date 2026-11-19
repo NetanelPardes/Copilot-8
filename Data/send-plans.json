@@ -1,5 +1,5 @@
 {
-  "nextNumber": 7,
+  "nextNumber": 8,
   "plans": [
     {
       "id": "20e75346-263f-4863-aa47-8ddfe4c3421f",
@@ -177,7 +177,7 @@
       "id": "c2b01240-15a0-47f0-ad19-d0ebef70c92e",
       "name": "Plan 4",
       "createdAt": "2026-11-18T15:25:03.6938508+02:00",
-      "revision": 10,
+      "revision": 20,
       "items": [
         {
           "id": "7c931b79-cadb-4a59-af22-f688f4e73faa",
@@ -199,14 +199,14 @@
           "paused": true
         },
         {
-          "id": "6bce3a85-d43a-4727-8ed3-2dad23e8d745",
+          "id": "f90525ce-c6b5-4b59-b71d-9861fd99b314",
           "input": {
             "profile": "116G|02|3.1|17",
             "label": "116",
             "data": 0,
             "sdi": 0,
-            "ssm": 0,
-            "hertz": 2,
+            "ssm": 3,
+            "hertz": 1,
             "editor": [
               {
                 "value": "0",
@@ -285,6 +285,13 @@
           "paused": false
         }
       ]
+    },
+    {
+      "id": "fc7b85d3-9588-4568-8345-dfafe46936e6",
+      "name": "Plan 7",
+      "createdAt": "2026-11-19T11:13:06.9846104+02:00",
+      "revision": 1,
+      "items": []
     }
   ]
 }

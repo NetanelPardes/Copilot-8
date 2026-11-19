@@ -94,7 +94,8 @@ function buildRecordingWorkbook(events, started, ended, partial) {
     const headings = ['מספר אירוע', 'תאריך האירוע (מקומי)', 'שעת האירוע (מקומית)',
         'כיוון UART', 'Label באוקטלי', 'מזהה שידור מחזורי', 'מספר בתים',
         'מילה / בתים שנדחו בהקס', 'פרטי שגיאה', 'מזהה חבילת UART',
-        'מספר מילים בחבילה', 'Checksum בהקס', 'חבילת UART מלאה בהקס'];
+        'מספר מילים בחבילה', 'Checksum בהקס', 'חבילת UART מלאה בהקס',
+        'Parity ARINC', 'פרופיל פענוח', 'ערך מפוענח', 'מצב SSM'];
     const direction = { TX: 'שידור (TX)', RX: 'קליטה (RX)', ERROR: 'שגיאה' };
     const rows = [
         worksheetRow(1, ['תחילת הקלטה', start.date + ' ' + start.time]),
@@ -111,11 +112,12 @@ function buildRecordingWorkbook(events, started, ended, partial) {
             direction[event.direction] ?? event.direction,
             event.label ?? '', event.cycleId ?? '', hex ? hex.split(' ').length : 0,
             hex, event.error ?? '', event.packetId ?? '', event.wordCount ?? '',
-            event.checksum ?? '', event.packetHex ?? ''
+            event.checksum ?? '', event.packetHex ?? '', event.parityStatus ?? '',
+            event.decodedProfile ?? '', event.decodedSummary ?? '', event.decodedStatus ?? ''
         ]));
     });
 
-    const columns = [14, 24, 24, 17, 19, 40, 13, 66, 44, 40, 18, 16, 100].map((width, i) =>
+    const columns = [14, 24, 24, 17, 19, 40, 13, 66, 44, 40, 18, 16, 100, 18, 45, 70, 28].map((width, i) =>
         `<col min="${i + 1}" max="${i + 1}" width="${width}" customWidth="1"/>`).join('');
 
     return zipWorkbook([
@@ -146,7 +148,7 @@ function buildRecordingWorkbook(events, started, ended, partial) {
         </styleSheet>`],
         ['xl/worksheets/sheet1.xml', `<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
           <sheetViews><sheetView workbookViewId="0" rightToLeft="1"><pane ySplit="4" topLeftCell="A5" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>
-          <cols>${columns}</cols><sheetData>${rows.join('')}</sheetData><autoFilter ref="A4:M${rows.length}"/>
+          <cols>${columns}</cols><sheetData>${rows.join('')}</sheetData><autoFilter ref="A4:Q${rows.length}"/>
         </worksheet>`]
     ]);
 }
